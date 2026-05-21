@@ -7,18 +7,13 @@
     "build": "next build",
     "start": "next start -p ${PORT:-3000}",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "tsx src/db/migrate.ts",
-    "db:studio": "drizzle-kit studio"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "drizzle-orm": "^0.36.4",
     "motion": "^11.15.0",
     "next": "16.2.6",
     "next-intl": "^4.12.0",
-    "postgres": "^3.4.5",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "tailwind-merge": "^2.6.0",
@@ -29,11 +24,9 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "drizzle-kit": "^0.30.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
-    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }

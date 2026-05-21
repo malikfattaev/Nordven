@@ -1,8 +1,8 @@
 import { z } from "zod";
 
 const serverEnvSchema = z.object({
-  DATABASE_URL: z.string().url().optional(),
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
+  CONTACT_WEBHOOK_URL: z.string().url().optional(),
 });
 
 const publicEnvSchema = z.object({

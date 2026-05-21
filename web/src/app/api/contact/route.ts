@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { serverEnv } from "@/lib/env";
 import { locales } from "@/i18n/routing";
 import { serviceSlugs } from "@/content/services";
+import { deliverLead } from "@/lib/leads";
 
 const payloadSchema = z.object({
   name: z.string().trim().min(2).max(120),
@@ -31,24 +31,9 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!serverEnv.DATABASE_URL) {
-    console.warn("[contact] DATABASE_URL not configured; skipping persistence");
-    return NextResponse.json({ ok: true, persisted: false }, { status: 202 });
+  const result = await deliverLead(parsed.data);
+  if (!result.ok) {
+    return NextResponse.json({ ok: false, error: "delivery_failed", reason: result.reason }, { status: 500 });
   }
-
-  try {
-    const { db, schema } = await import("@/db/client");
-    await db.insert(schema.leads).values({
-      name: parsed.data.name,
-      email: parsed.data.email,
-      company: parsed.data.company,
-      serviceInterest: parsed.data.serviceInterest,
-      message: parsed.data.message,
-      locale: parsed.data.locale,
-    });
-    return NextResponse.json({ ok: true, persisted: true }, { status: 201 });
-  } catch (error) {
-    console.error("[contact] failed to persist lead", error);
-    return NextResponse.json({ ok: false, error: "persist_failed" }, { status: 500 });
-  }
+  return NextResponse.json({ ok: true, forwarded: result.forwarded }, { status: 201 });
 }
