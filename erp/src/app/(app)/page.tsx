@@ -12,16 +12,16 @@ export default async function DashboardPage() {
         Dashboard
       </p>
       <h1 className="mt-2 font-display text-3xl text-[color:var(--color-ink)] sm:text-4xl">
-        Привет, {user?.name ?? "коллега"}.
+        Welcome, {user?.name ?? "team"}.
       </h1>
       <p className="mt-3 max-w-xl text-sm text-[color:var(--color-ink-soft)]">
-        Это рабочее пространство Nordven ERP. Финансы и проекты появятся позже, сотрудники уже на месте.
+        Your Nordven ERP workspace. Finance and project modules are landing next, employees are already live.
       </p>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-3">
-        <KpiCard label="Сотрудники" value={count} accent="mist" />
-        <KpiCard label="Активные проекты" value="—" accent="mint" />
-        <KpiCard label="Месячный оборот" value="—" accent="lilac" />
+        <KpiCard label="Employees" value={count} accent="mist" />
+        <KpiCard label="Active projects" value="—" accent="mint" />
+        <KpiCard label="Monthly revenue" value="—" accent="lilac" />
       </div>
     </div>
   );

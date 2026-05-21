@@ -6,12 +6,18 @@ import { hashPassword, readSession } from "@/lib/auth";
 
 export type EmployeeFormState = { error?: string; ok?: true };
 
-function validate(login: string, password: string, name: string, surname: string): string | null {
-  if (login.length < 3) return "Логин минимум 3 символа";
-  if (/\s/.test(login)) return "Логин без пробелов";
-  if (password.length < 8) return "Пароль минимум 8 символов";
-  if (name.length < 1) return "Имя обязательно";
-  if (surname.length < 1) return "Фамилия обязательна";
+function validateCommon(login: string, name: string, surname: string): string | null {
+  if (login.length < 3) return "Login must be at least 3 characters";
+  if (/\s/.test(login)) return "Login can't contain spaces";
+  if (name.length < 1) return "First name is required";
+  if (surname.length < 1) return "Last name is required";
+  return null;
+}
+
+function parseDuplicate(message: string): string | null {
+  if (message.includes("duplicate") || message.includes("unique")) {
+    return "An employee with this login already exists";
+  }
   return null;
 }
 
@@ -25,8 +31,9 @@ export async function createEmployeeAction(
   const surname = String(formData.get("surname") ?? "").trim();
   const position = String(formData.get("position") ?? "").trim();
 
-  const error = validate(login, password, name, surname);
-  if (error) return { error };
+  const baseError = validateCommon(login, name, surname);
+  if (baseError) return { error: baseError };
+  if (password.length < 8) return { error: "Password must be at least 8 characters" };
 
   const sql = getSql();
   const password_hash = await hashPassword(password);
@@ -38,10 +45,62 @@ export async function createEmployeeAction(
     `;
   } catch (err) {
     const message = err instanceof Error ? err.message : "unknown";
-    if (message.includes("duplicate") || message.includes("unique")) {
-      return { error: "Сотрудник с таким логином уже есть" };
+    return { error: parseDuplicate(message) ?? "Couldn't save" };
+  }
+
+  revalidatePath("/employees");
+  revalidatePath("/");
+  return { ok: true };
+}
+
+export async function updateEmployeeAction(
+  _prev: EmployeeFormState,
+  formData: FormData,
+): Promise<EmployeeFormState> {
+  const id = String(formData.get("id") ?? "");
+  if (!id) return { error: "Employee not found" };
+
+  const login = String(formData.get("login") ?? "").trim();
+  const password = String(formData.get("password") ?? "");
+  const name = String(formData.get("name") ?? "").trim();
+  const surname = String(formData.get("surname") ?? "").trim();
+  const position = String(formData.get("position") ?? "").trim();
+
+  const baseError = validateCommon(login, name, surname);
+  if (baseError) return { error: baseError };
+  if (password.length > 0 && password.length < 8) {
+    return { error: "Password must be at least 8 characters" };
+  }
+
+  const sql = getSql();
+
+  try {
+    if (password.length > 0) {
+      const password_hash = await hashPassword(password);
+      await sql`
+        UPDATE users
+        SET login = ${login},
+            name = ${name},
+            surname = ${surname},
+            position = ${position},
+            password_hash = ${password_hash},
+            updated_at = now()
+        WHERE id = ${id}
+      `;
+    } else {
+      await sql`
+        UPDATE users
+        SET login = ${login},
+            name = ${name},
+            surname = ${surname},
+            position = ${position},
+            updated_at = now()
+        WHERE id = ${id}
+      `;
     }
-    return { error: "Не получилось сохранить" };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "unknown";
+    return { error: parseDuplicate(message) ?? "Couldn't save" };
   }
 
   revalidatePath("/employees");

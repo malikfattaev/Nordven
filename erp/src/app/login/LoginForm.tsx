@@ -14,7 +14,7 @@ export function LoginForm({ next }: { next?: string }) {
 
       <label className="flex flex-col gap-1.5">
         <span className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
-          Логин
+          Login
         </span>
         <input
           name="login"
@@ -26,7 +26,7 @@ export function LoginForm({ next }: { next?: string }) {
 
       <label className="flex flex-col gap-1.5">
         <span className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
-          Пароль
+          Password
         </span>
         <input
           name="password"
@@ -48,7 +48,7 @@ export function LoginForm({ next }: { next?: string }) {
         disabled={pending}
         className="mt-2 h-11 rounded-full bg-[color:var(--color-ink)] text-sm font-medium text-[color:var(--color-canvas)] transition-colors duration-200 ease-[var(--ease-soft)] hover:bg-[#2a2824] disabled:opacity-60"
       >
-        {pending ? "Входим..." : "Войти"}
+        {pending ? "Signing in..." : "Sign in"}
       </button>
     </form>
   );

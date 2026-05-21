@@ -17,17 +17,17 @@ export async function loginAction(
   const next = String(formData.get("next") ?? "/");
 
   if (!login || !password) {
-    return { error: "Введите логин и пароль" };
+    return { error: "Enter login and password" };
   }
 
   const user = await findUserByLogin(login);
   if (!user) {
-    return { error: "Неверный логин или пароль" };
+    return { error: "Invalid login or password" };
   }
 
   const ok = await verifyPassword(password, user.password_hash);
   if (!ok) {
-    return { error: "Неверный логин или пароль" };
+    return { error: "Invalid login or password" };
   }
 
   await issueSession({

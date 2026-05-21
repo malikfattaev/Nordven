@@ -54,7 +54,7 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
               <button
                 type="button"
                 onClick={onClose}
-                aria-label="Закрыть"
+                aria-label="Close"
                 className="grid h-8 w-8 place-items-center rounded-full border border-[color:var(--color-line)] text-[color:var(--color-ink-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:border-[color:var(--color-ink)] hover:text-[color:var(--color-ink)]"
               >
                 <X size={14} strokeWidth={1.75} />

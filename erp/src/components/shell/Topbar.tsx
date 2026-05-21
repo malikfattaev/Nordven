@@ -22,7 +22,7 @@ export function Topbar({ user }: { user: SessionUser }) {
         <form action={logoutAction}>
           <button
             type="submit"
-            aria-label="Выйти"
+            aria-label="Sign out"
             className="grid h-9 w-9 place-items-center rounded-full border border-[color:var(--color-line)] text-[color:var(--color-ink-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:border-[color:var(--color-ink)] hover:text-[color:var(--color-ink)]"
           >
             <LogOut size={15} strokeWidth={1.75} />
