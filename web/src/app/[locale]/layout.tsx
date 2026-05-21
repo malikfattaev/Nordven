@@ -6,6 +6,7 @@ import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { PageTransition } from "@/components/layout/PageTransition";
+import { SmoothAnchorScroll } from "@/components/layout/SmoothAnchorScroll";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { publicEnv } from "@/lib/env";
 import { htmlLangMap, ogLocaleMap, pathForLocale } from "@/lib/seo";
@@ -124,6 +125,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="min-h-screen flex flex-col">
         <OrganizationJsonLd locale={locale as Locale} />
+        <SmoothAnchorScroll />
         <NextIntlClientProvider>
           <Header />
           <main id="main" className="flex-1">
