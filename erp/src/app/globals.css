@@ -1,23 +1,93 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --color-ink: #fbf8f3;
-  --color-canvas: #0f0e0c;
-  --color-canvas-soft: #1a1916;
-  --color-line: rgba(251, 248, 243, 0.12);
-  --color-mute: rgba(251, 248, 243, 0.55);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-canvas: #fbf8f3;
+  --color-canvas-elevated: #ffffff;
+  --color-ink: #161513;
+  --color-ink-soft: #5b574f;
+  --color-ink-muted: #8c877d;
+  --color-line: #ece6dc;
+  --color-line-strong: #d8d0c2;
+
+  --color-mist-50: #f3f6fb;
+  --color-mist-100: #e2ecf8;
+  --color-mist-200: #c3d8ef;
+  --color-mist-300: #9bbde0;
+  --color-mist-400: #6e9fce;
+  --color-mist-500: #4d83b8;
+
+  --color-mint-50: #f1f8f3;
+  --color-mint-100: #d8edde;
+  --color-mint-200: #b1dcbe;
+  --color-mint-300: #87c79b;
+  --color-mint-400: #61b07a;
+  --color-mint-500: #459362;
+
+  --color-peach-50: #fdf4ee;
+  --color-peach-100: #fbe1d0;
+  --color-peach-200: #f6c19f;
+  --color-peach-300: #ef9d6a;
+  --color-peach-400: #e57b3d;
+  --color-peach-500: #c95f25;
+
+  --color-lilac-50: #f6f3fb;
+  --color-lilac-100: #e6deef;
+  --color-lilac-200: #cbbcdd;
+  --color-lilac-300: #ac96c6;
+  --color-lilac-400: #8b73ad;
+  --color-lilac-500: #6f5990;
+
+  --color-rose-100: #f9e0e0;
+  --color-rose-400: #d65b5b;
+  --color-rose-500: #b73f3f;
+
+  --radius-card: 1.25rem;
+  --radius-pill: 9999px;
+
+  --shadow-soft: 0 1px 2px rgba(22, 21, 19, 0.04), 0 8px 32px rgba(22, 21, 19, 0.05);
+  --shadow-lift: 0 2px 4px rgba(22, 21, 19, 0.05), 0 24px 60px rgba(22, 21, 19, 0.08);
+
+  --ease-soft: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  body {
+    text-rendering: optimizeLegibility;
     background-color: var(--color-canvas);
+  }
+
+  body {
     color: var(--color-ink);
     font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    background-color: var(--color-canvas);
     min-height: 100vh;
   }
+
+  ::selection {
+    background-color: var(--color-mist-200);
+    color: var(--color-ink);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.015em;
+  }
+}
+
+@utility card-surface {
+  background-color: var(--color-canvas-elevated);
+}
+
+@utility input-surface {
+  background-color: var(--color-canvas-elevated);
 }
