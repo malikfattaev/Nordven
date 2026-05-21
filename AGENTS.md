@@ -55,3 +55,18 @@ Before calling UI work done, ask:
 - Are hover/focus states intentional?
 
 If the answer is no, keep polishing.
+
+## Engineering Standard
+
+Premium UI must not come at the expense of engineering quality. Keep the code as strong as the visuals.
+
+- Use clean, maintainable React and Next.js patterns.
+- Preserve type safety; run typecheck for meaningful changes.
+- Keep components readable and avoid clever one-off hacks.
+- Maintain accessibility: semantic HTML, keyboard states, focus visibility, labels, contrast, and reduced-motion behavior where relevant.
+- Keep responsive layout intentional across desktop, tablet, and mobile.
+- Watch performance: avoid unnecessary client components, heavy effects, layout thrash, excessive filters, and persistent compositor layers.
+- Preserve SEO and metadata behavior when touching pages, layouts, routing, or content.
+- Prefer small, purposeful abstractions over large generic component systems.
+- Use lint, typecheck, build, and browser verification when practical.
+- If a visual idea requires technical tradeoffs, pause and name the tradeoff before committing to it.
