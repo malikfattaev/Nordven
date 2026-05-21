@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { publicEnv } from "@/lib/env";
 
@@ -90,7 +89,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main id="main" className="flex-1">
             <PageTransition>{children}</PageTransition>
           </main>
-          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
