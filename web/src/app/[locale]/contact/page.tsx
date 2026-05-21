@@ -95,7 +95,7 @@ export default async function ContactPage({ params }: Props) {
                       href={channel.href}
                       target={channel.external ? "_blank" : undefined}
                       rel={channel.external ? "noreferrer" : undefined}
-                      className="card-surface group flex items-center justify-between gap-6 rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-5 transition-all duration-300 ease-[var(--ease-soft)] hover:-translate-y-0.5 hover:border-[color:var(--color-ink)] hover:shadow-[var(--shadow-soft)]"
+                      className="card-surface group flex items-center justify-between gap-6 rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-5 transition-[transform,border-color,box-shadow] duration-300 ease-[var(--ease-soft)] hover:-translate-y-0.5 hover:border-[color:var(--color-ink)] hover:shadow-[var(--shadow-soft)]"
                     >
                       <div>
                         <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-ink-soft)]">

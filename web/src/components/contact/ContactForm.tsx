@@ -12,7 +12,7 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 type FieldErrors = Partial<Record<"name" | "email" | "message", string>>;
 
 const fieldClasses = cn(
-  "input-surface block w-full rounded-2xl border border-[color:var(--color-line)] px-4 py-3 text-sm text-[color:var(--color-ink)] shadow-none transition-all duration-300 ease-[var(--ease-soft)] placeholder:text-[color:var(--color-ink-muted)]",
+  "input-surface block w-full rounded-2xl border border-[color:var(--color-line)] px-4 py-3 text-sm text-[color:var(--color-ink)] shadow-none transition-[border-color,box-shadow] duration-200 ease-[var(--ease-soft)] placeholder:text-[color:var(--color-ink-muted)]",
   "focus:outline-none focus:border-[color:var(--color-ink)] focus:ring-2 focus:ring-[color:var(--color-mist-200)]",
 );
 

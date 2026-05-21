@@ -31,7 +31,8 @@ export function ServicesShowcase() {
               key={service.slug}
               style={{ "--accent": service.theme.accent, "--tint": service.theme.tint } as CSSProperties}
               className={cn(
-                "card-surface group relative isolate flex min-h-[19rem] cursor-pointer flex-col justify-between overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8 transition-all duration-500 ease-[var(--ease-soft)]",
+                "card-surface group relative isolate flex min-h-[19rem] cursor-pointer flex-col justify-between overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8",
+                "transition-[transform,border-color,box-shadow] duration-300 ease-[var(--ease-soft)]",
                 "hover:-translate-y-1 hover:border-[color:var(--accent)] hover:shadow-[var(--shadow-lift)]",
               )}
             >
@@ -60,7 +61,7 @@ export function ServicesShowcase() {
                 </span>
                 <span
                   aria-hidden
-                  className="grid h-8 w-8 place-items-center rounded-full border border-[color:var(--color-line)] text-[color:var(--color-ink-muted)] transition-all duration-500 ease-[var(--ease-soft)] group-hover:border-[color:var(--accent)] group-hover:text-[color:var(--color-ink)]"
+                  className="grid h-8 w-8 place-items-center rounded-full border border-[color:var(--color-line)] text-[color:var(--color-ink-muted)] transition-[border-color,color] duration-300 ease-[var(--ease-soft)] group-hover:border-[color:var(--accent)] group-hover:text-[color:var(--color-ink)]"
                 >
                   <svg
                     width="12"
