@@ -16,14 +16,7 @@
     "skipToContent": "Saltar al contenido"
   },
   "footer": {
-    "tagline": "Software duradero para equipos que avanzan rápido.",
-    "services": "Servicios",
-    "company": "Estudio",
-    "legal": "Legal",
-    "privacy": "Privacidad",
-    "terms": "Términos",
-    "rights": "Todos los derechos reservados.",
-    "based": "Operamos en todo el mundo."
+    "rights": "Todos los derechos reservados."
   },
   "home": {
     "hero": {
@@ -33,11 +26,7 @@
       "titleB": "desde el primer pixel hasta el último despliegue.",
       "subtitle": "Diseñamos, construimos y operamos productos web, plataformas ERP internas y la infraestructura en la nube que los sostiene, como un solo equipo en un solo plan.",
       "primaryCta": "Iniciar proyecto",
-      "secondaryCta": "Ver nuestro trabajo",
-      "badge": "Tomando proyectos para Q3"
-    },
-    "marquee": {
-      "title": "Equipos en entornos regulados, de alto tráfico y de cero a uno confían en nosotros."
+      "secondaryCta": "Ver nuestro trabajo"
     },
     "services": {
       "eyebrow": "Lo que hacemos",

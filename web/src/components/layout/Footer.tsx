@@ -1,96 +1,48 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "@/components/ui/Logo";
-import { footerNav } from "@/content/navigation";
+import { primaryNav } from "@/content/navigation";
 import { site } from "@/content/site";
 
 export function Footer() {
-  const t = useTranslations("footer");
-  const tNav = useTranslations("nav");
-  const tServices = useTranslations("services");
+  const t = useTranslations("nav");
+  const tFooter = useTranslations("footer");
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-[color:var(--color-line)] bg-[color:var(--color-canvas)]">
-      <div className="container-page grid gap-12 py-16 md:grid-cols-12 md:gap-8">
-        <div className="md:col-span-5">
+    <footer className="border-t border-[color:var(--color-line)] bg-[color:var(--color-canvas)]">
+      <div className="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:py-12">
+        <Link
+          href="/"
+          className="-mx-2 rounded-full px-2 py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-ink)]"
+        >
           <Logo />
-          <p className="mt-5 max-w-sm text-pretty text-sm text-[color:var(--color-ink-soft)]">
-            {t("tagline")}
-          </p>
-          <p className="mt-6 text-xs text-[color:var(--color-ink-muted)]">{t("based")}</p>
-        </div>
+        </Link>
 
-        <div className="md:col-span-2">
-          <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
-            {t("services")}
-          </h3>
-          <ul className="mt-4 space-y-2.5">
-            {footerNav.services.map((item) => (
-              <li key={item.key}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-[color:var(--color-ink-soft)] transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
-                >
-                  {tServices(`${item.key}.name`)}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <nav
+          aria-label="Footer"
+          className="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm text-[color:var(--color-ink-soft)]"
+        >
+          {primaryNav.map((item) => (
+            <Link
+              key={item.key}
+              href={item.href}
+              className="transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
+            >
+              {t(item.key)}
+            </Link>
+          ))}
+          <a
+            href={`mailto:${site.email}`}
+            className="transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
+          >
+            {site.email}
+          </a>
+        </nav>
 
-        <div className="md:col-span-2">
-          <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
-            {t("company")}
-          </h3>
-          <ul className="mt-4 space-y-2.5">
-            {footerNav.company.map((item) => (
-              <li key={item.key}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-[color:var(--color-ink-soft)] transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
-                >
-                  {tNav(item.key)}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="md:col-span-3">
-          <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
-            {t("legal")}
-          </h3>
-          <ul className="mt-4 space-y-2.5">
-            {footerNav.legal.map((item) => (
-              <li key={item.key}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-[color:var(--color-ink-soft)] transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
-                >
-                  {t(item.key)}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="text-sm text-[color:var(--color-ink-soft)] transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
-              >
-                {site.email}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-[color:var(--color-line)]">
-        <div className="container-page flex flex-col items-start justify-between gap-3 py-6 text-xs text-[color:var(--color-ink-muted)] sm:flex-row sm:items-center">
-          <span>
-            &copy; {year} {site.name}. {t("rights")}
-          </span>
-          <span className="font-mono uppercase tracking-[0.18em]">{site.name} / Studio</span>
-        </div>
+        <p className="text-xs text-[color:var(--color-ink-muted)] sm:text-right">
+          &copy; {year} {site.name}. {tFooter("rights")}
+        </p>
       </div>
     </footer>
   );

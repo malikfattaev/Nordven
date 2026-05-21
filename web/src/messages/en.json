@@ -16,14 +16,7 @@
     "skipToContent": "Skip to content"
   },
   "footer": {
-    "tagline": "Calm, durable software for teams that move quickly.",
-    "services": "Services",
-    "company": "Company",
-    "legal": "Legal",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "rights": "All rights reserved.",
-    "based": "Operating worldwide."
+    "rights": "All rights reserved."
   },
   "home": {
     "hero": {
@@ -33,11 +26,7 @@
       "titleB": "from the first pixel to the last deploy.",
       "subtitle": "We design, build, and operate web products, internal ERP platforms, and the cloud infrastructure underneath them - as one team, on one timeline.",
       "primaryCta": "Start a project",
-      "secondaryCta": "See our work",
-      "badge": "Booking Q3 engagements"
-    },
-    "marquee": {
-      "title": "Trusted by teams shipping in regulated, high-traffic, and zero-to-one environments."
+      "secondaryCta": "See our work"
     },
     "services": {
       "eyebrow": "What we do",

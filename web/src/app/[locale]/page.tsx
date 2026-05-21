@@ -3,7 +3,6 @@ import { Hero } from "@/components/home/Hero";
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 import { Process } from "@/components/home/Process";
 import { Metrics } from "@/components/home/Metrics";
-import { CtaBlock } from "@/components/home/CtaBlock";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -19,7 +18,6 @@ export default async function HomePage({ params }: Props) {
       <ServicesShowcase />
       <Process />
       <Metrics />
-      <CtaBlock />
     </>
   );
 }
