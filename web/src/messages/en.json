@@ -117,7 +117,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Tell us about the project.",
-    "subtitle": "A few sentences is plenty. We will reply within one business day with a calendar link.",
+    "subtitle": "A few sentences is plenty. We will reply within one business day.",
     "form": {
       "name": "Your name",
       "namePlaceholder": "Avery Stone",
@@ -132,7 +132,7 @@
       "submit": "Send message",
       "submitting": "Sending...",
       "success": "Thank you. We will be in touch shortly.",
-      "error": "Something went wrong. Please try again or email sales@nordvenlab.com.",
+      "error": "Something went wrong. Please try again or email coo@nordvenlab.com.",
       "validation": {
         "nameTooShort": "Please enter your name.",
         "emailInvalid": "Please enter a valid email.",

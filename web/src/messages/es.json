@@ -117,7 +117,7 @@
   "contact": {
     "eyebrow": "Contacto",
     "title": "Cuéntanos sobre tu proyecto.",
-    "subtitle": "Unas frases son suficientes. Te responderemos en menos de un día hábil con un enlace para agendar.",
+    "subtitle": "Unas frases son suficientes. Te responderemos en menos de un día hábil.",
     "form": {
       "name": "Tu nombre",
       "namePlaceholder": "Avery Stone",
@@ -132,7 +132,7 @@
       "submit": "Enviar mensaje",
       "submitting": "Enviando...",
       "success": "Gracias. Estaremos en contacto pronto.",
-      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos a sales@nordvenlab.com.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos a coo@nordvenlab.com.",
       "validation": {
         "nameTooShort": "Por favor escribe tu nombre.",
         "emailInvalid": "Por favor escribe un correo válido.",

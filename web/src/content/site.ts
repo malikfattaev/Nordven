@@ -2,7 +2,7 @@ export const site = {
   name: "Nordven",
   tagline: "Software Lab",
   domain: "nordvenlab.com",
-  email: "sales@nordvenlab.com",
+  email: "coo@nordvenlab.com",
   socials: {
     instagram: {
       handle: "nordvenlab",

@@ -10,7 +10,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[color:var(--color-line)] bg-[color:var(--color-canvas)]">
+    <footer className="border-t border-[color:var(--color-line)]">
       <div className="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:py-12">
         <Link
           href="/"

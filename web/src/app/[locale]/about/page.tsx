@@ -78,7 +78,7 @@ export default async function AboutPage({ params }: Props) {
             {TEAM_KEYS.map((key) => (
               <li
                 key={key}
-                className="rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8"
+                className="card-surface rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8"
               >
                 <p className="font-display text-2xl text-[color:var(--color-ink)] sm:text-3xl">
                   {t(`team.members.${key}.name`)}

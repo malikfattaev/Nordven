@@ -31,7 +31,7 @@ export function ServicesShowcase() {
               key={service.slug}
               style={{ "--accent": service.theme.accent, "--tint": service.theme.tint } as CSSProperties}
               className={cn(
-                "group relative isolate flex min-h-[19rem] cursor-pointer flex-col justify-between overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] bg-[color:var(--color-canvas)] p-8 transition-all duration-500 ease-[var(--ease-soft)]",
+                "card-surface group relative isolate flex min-h-[19rem] cursor-pointer flex-col justify-between overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8 transition-all duration-500 ease-[var(--ease-soft)]",
                 "hover:-translate-y-1 hover:border-[color:var(--accent)] hover:shadow-[var(--shadow-lift)]",
               )}
             >
