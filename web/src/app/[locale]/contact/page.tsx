@@ -42,6 +42,23 @@ export default async function ContactPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("contact");
 
+  const channels = [
+    {
+      key: "email",
+      label: t("channels.email.label"),
+      value: site.email,
+      href: `mailto:${site.email}`,
+      external: false,
+    },
+    {
+      key: "instagram",
+      label: t("channels.instagram.label"),
+      value: `@${site.socials.instagram.handle}`,
+      href: site.socials.instagram.url,
+      external: true,
+    },
+  ];
+
   return (
     <Section className="pb-24 pt-4 sm:pt-6">
       <Container>
@@ -51,57 +68,41 @@ export default async function ContactPage({ params }: Props) {
             <p className="mt-6 max-w-md text-pretty text-[color:var(--color-ink-soft)]">
               {t("subtitle")}
             </p>
+
+            <div className="mt-12">
+              <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--color-ink-muted)]">
+                {t("channels.eyebrow")}
+              </p>
+              <ul className="mt-5 grid gap-3">
+                {channels.map((channel) => (
+                  <li key={channel.key}>
+                    <a
+                      href={channel.href}
+                      target={channel.external ? "_blank" : undefined}
+                      rel={channel.external ? "noreferrer" : undefined}
+                      className="group flex items-center justify-between gap-6 rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-5 transition-colors duration-300 ease-[var(--ease-soft)] hover:border-[color:var(--color-ink)]"
+                    >
+                      <div>
+                        <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-ink-soft)]">
+                          {channel.label}
+                        </p>
+                        <p className="mt-1.5 font-display text-lg text-[color:var(--color-ink)]">
+                          {channel.value}
+                        </p>
+                      </div>
+                      <span className="text-[color:var(--color-ink-soft)] group-hover:text-[color:var(--color-ink)]">
+                        {ArrowOut}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="md:col-span-7">
             <ContactForm />
           </div>
-        </div>
-
-        <div className="mt-20">
-          <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--color-ink-muted)]">
-            {t("channels.eyebrow")}
-          </p>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="group flex h-full items-center justify-between gap-6 rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 transition-colors duration-300 ease-[var(--ease-soft)] hover:border-[color:var(--color-ink)]"
-              >
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-ink-soft)]">
-                    {t("channels.email.label")}
-                  </p>
-                  <p className="mt-2 font-display text-lg text-[color:var(--color-ink)] sm:text-xl">
-                    {site.email}
-                  </p>
-                </div>
-                <span className="text-[color:var(--color-ink-soft)] group-hover:text-[color:var(--color-ink)]">
-                  {ArrowOut}
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href={site.socials.instagram.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex h-full items-center justify-between gap-6 rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 transition-colors duration-300 ease-[var(--ease-soft)] hover:border-[color:var(--color-ink)]"
-              >
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-ink-soft)]">
-                    {t("channels.instagram.label")}
-                  </p>
-                  <p className="mt-2 font-display text-lg text-[color:var(--color-ink)] sm:text-xl">
-                    @{site.socials.instagram.handle}
-                  </p>
-                </div>
-                <span className="text-[color:var(--color-ink-soft)] group-hover:text-[color:var(--color-ink)]">
-                  {ArrowOut}
-                </span>
-              </a>
-            </li>
-          </ul>
         </div>
       </Container>
     </Section>
