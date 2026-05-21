@@ -5,7 +5,7 @@ export default function FinancePage() {
         Finance
       </p>
       <h1 className="mt-2 font-display text-3xl text-[color:var(--color-ink)] sm:text-4xl">
-        Transactions
+        Cashflow
       </h1>
       <p className="mt-3 max-w-xl text-sm text-[color:var(--color-ink-soft)]">
         Coming next release.
