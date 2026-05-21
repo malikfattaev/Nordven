@@ -1,15 +1,46 @@
 export const serviceSlugs = ["websites", "erp", "ai"] as const;
 export type ServiceSlug = (typeof serviceSlugs)[number];
 
+export type ServiceTheme = {
+  accent: string;
+  accentSoft: string;
+  tint: string;
+  badge: string;
+};
+
 export type ServiceDefinition = {
   slug: ServiceSlug;
-  number: string;
+  theme: ServiceTheme;
 };
 
 export const services: ReadonlyArray<ServiceDefinition> = [
-  { slug: "websites", number: "01" },
-  { slug: "erp", number: "02" },
-  { slug: "ai", number: "03" },
+  {
+    slug: "websites",
+    theme: {
+      accent: "var(--color-mist-300)",
+      accentSoft: "var(--color-mist-100)",
+      tint: "rgba(195, 216, 239, 0.35)",
+      badge: "bg-[color:var(--color-mist-100)] text-[color:var(--color-mist-500)]",
+    },
+  },
+  {
+    slug: "erp",
+    theme: {
+      accent: "var(--color-mint-300)",
+      accentSoft: "var(--color-mint-100)",
+      tint: "rgba(177, 220, 190, 0.32)",
+      badge: "bg-[color:var(--color-mint-100)] text-[color:var(--color-mint-500)]",
+    },
+  },
+  {
+    slug: "ai",
+    theme: {
+      accent: "var(--color-lilac-300)",
+      accentSoft: "var(--color-lilac-100)",
+      tint: "rgba(203, 188, 221, 0.32)",
+      badge: "bg-[color:var(--color-lilac-100)] text-[color:var(--color-lilac-500)]",
+    },
+  },
 ] as const;
 
 export const contactInterestSlugs = [...serviceSlugs, "other"] as const;

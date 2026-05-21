@@ -77,6 +77,20 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(60rem 38rem at 8% -10%, rgba(195, 216, 239, 0.45), transparent 60%),
+      radial-gradient(48rem 36rem at 92% 12%, rgba(251, 225, 208, 0.4), transparent 60%),
+      radial-gradient(56rem 40rem at 22% 78%, rgba(230, 222, 239, 0.45), transparent 60%),
+      radial-gradient(52rem 36rem at 96% 92%, rgba(216, 237, 222, 0.4), transparent 60%);
   }
 
   ::selection {

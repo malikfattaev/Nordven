@@ -44,24 +44,24 @@ export default async function ContactPage({ params }: Props) {
   const t = await getTranslations("contact");
 
   return (
-    <Section className="pb-24 pt-20 sm:pt-24">
+    <Section className="pb-24 pt-16 sm:pt-20">
       <Container>
-        <div className="mx-auto max-w-3xl text-center">
-          <Eyebrow>{t("eyebrow")}</Eyebrow>
-          <h1 className="mt-6 font-display text-5xl text-balance sm:text-6xl md:text-7xl">
-            {t("title")}
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-[color:var(--color-ink-soft)] sm:text-lg">
-            {t("subtitle")}
-          </p>
+        <div className="grid gap-12 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-5">
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
+            <h1 className="mt-6 font-display text-5xl text-balance sm:text-6xl">{t("title")}</h1>
+            <p className="mt-6 max-w-md text-pretty text-[color:var(--color-ink-soft)]">
+              {t("subtitle")}
+            </p>
+          </div>
+
+          <div className="md:col-span-7">
+            <ContactForm />
+          </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-2xl">
-          <ContactForm />
-        </div>
-
-        <div className="mx-auto mt-20 max-w-2xl">
-          <p className="text-center text-xs uppercase tracking-[0.22em] text-[color:var(--color-ink-muted)]">
+        <div className="mt-20">
+          <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--color-ink-muted)]">
             {t("channels.eyebrow")}
           </p>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2">
