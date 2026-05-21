@@ -123,7 +123,6 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen flex flex-col">
-        <div aria-hidden className="page-backdrop" />
         <OrganizationJsonLd locale={locale as Locale} />
         <NextIntlClientProvider>
           <Header />

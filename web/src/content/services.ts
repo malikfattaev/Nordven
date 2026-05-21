@@ -3,8 +3,6 @@ export type ServiceSlug = (typeof serviceSlugs)[number];
 
 export type ServiceTheme = {
   accent: string;
-  accentSoft: string;
-  tint: string;
   badge: string;
 };
 
@@ -18,8 +16,6 @@ export const services: ReadonlyArray<ServiceDefinition> = [
     slug: "websites",
     theme: {
       accent: "var(--color-mist-300)",
-      accentSoft: "var(--color-mist-100)",
-      tint: "rgba(195, 216, 239, 0.35)",
       badge: "bg-[color:var(--color-mist-100)] text-[color:var(--color-mist-500)]",
     },
   },
@@ -27,8 +23,6 @@ export const services: ReadonlyArray<ServiceDefinition> = [
     slug: "erp",
     theme: {
       accent: "var(--color-mint-300)",
-      accentSoft: "var(--color-mint-100)",
-      tint: "rgba(177, 220, 190, 0.32)",
       badge: "bg-[color:var(--color-mint-100)] text-[color:var(--color-mint-500)]",
     },
   },
@@ -36,8 +30,6 @@ export const services: ReadonlyArray<ServiceDefinition> = [
     slug: "ai",
     theme: {
       accent: "var(--color-lilac-300)",
-      accentSoft: "var(--color-lilac-100)",
-      tint: "rgba(203, 188, 221, 0.32)",
       badge: "bg-[color:var(--color-lilac-100)] text-[color:var(--color-lilac-500)]",
     },
   },

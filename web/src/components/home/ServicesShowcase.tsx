@@ -29,27 +29,13 @@ export function ServicesShowcase() {
           {services.map((service) => (
             <li
               key={service.slug}
-              style={{ "--accent": service.theme.accent, "--tint": service.theme.tint } as CSSProperties}
+              style={{ "--accent": service.theme.accent } as CSSProperties}
               className={cn(
-                "card-surface group relative isolate flex min-h-[19rem] cursor-pointer flex-col justify-between overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8",
-                "transition-[transform,border-color,box-shadow] duration-300 ease-[var(--ease-soft)]",
-                "hover:-translate-y-1 hover:border-[color:var(--accent)] hover:shadow-[var(--shadow-lift)]",
+                "card-surface group relative flex min-h-[19rem] cursor-pointer flex-col justify-between rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8",
+                "transition-[border-color] duration-300 ease-[var(--ease-soft)]",
+                "hover:border-[color:var(--accent)]",
               )}
             >
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-500 ease-[var(--ease-soft)] group-hover:opacity-100"
-                style={{
-                  background: `radial-gradient(120% 90% at 50% 0%, var(--tint), transparent 75%)`,
-                }}
-              />
-
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 transition-transform duration-500 ease-[var(--ease-soft)] group-hover:scale-x-100"
-                style={{ background: "var(--accent)" }}
-              />
-
               <div className="flex items-center justify-between">
                 <span
                   className={cn(
@@ -61,7 +47,7 @@ export function ServicesShowcase() {
                 </span>
                 <span
                   aria-hidden
-                  className="grid h-8 w-8 place-items-center rounded-full border border-[color:var(--color-line)] text-[color:var(--color-ink-muted)] transition-[border-color,color] duration-300 ease-[var(--ease-soft)] group-hover:border-[color:var(--accent)] group-hover:text-[color:var(--color-ink)]"
+                  className="grid h-8 w-8 place-items-center rounded-full border border-[color:var(--color-line)] text-[color:var(--color-ink-muted)] transition-colors duration-300 ease-[var(--ease-soft)] group-hover:border-[color:var(--accent)] group-hover:text-[color:var(--color-ink)]"
                 >
                   <svg
                     width="12"
@@ -72,7 +58,6 @@ export function ServicesShowcase() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="transition-transform duration-500 ease-[var(--ease-soft)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   >
                     <path d="M7 17 L17 7" />
                     <path d="M9 7 L17 7 L17 15" />
