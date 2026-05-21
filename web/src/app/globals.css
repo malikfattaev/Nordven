@@ -75,8 +75,10 @@
   html {
     background-color: var(--color-canvas);
     background-image:
-      radial-gradient(ellipse 90% 70% at 0% 0%, rgba(195, 216, 239, 0.6), transparent 70%),
-      radial-gradient(ellipse 90% 70% at 100% 100%, rgba(230, 222, 239, 0.65), transparent 70%);
+      radial-gradient(ellipse 95% 75% at 0% 0%, rgba(155, 189, 224, 0.72), transparent 72%),
+      radial-gradient(ellipse 95% 75% at 100% 0%, rgba(246, 193, 159, 0.65), transparent 72%),
+      radial-gradient(ellipse 95% 75% at 0% 100%, rgba(177, 220, 190, 0.65), transparent 72%),
+      radial-gradient(ellipse 95% 75% at 100% 100%, rgba(203, 188, 221, 0.78), transparent 72%);
   }
 
   body {
@@ -131,12 +133,12 @@
 }
 
 @keyframes page-in {
-  from { opacity: 0; transform: translate3d(0, 16px, 0); }
-  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .animate-page-in {
-  animation: page-in 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation: page-in 0.45s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
