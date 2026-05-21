@@ -12,7 +12,7 @@ export function Section({ as: Tag = "section", className, tight = false, ...prop
       {...props}
       className={cn(
         "relative",
-        tight ? "py-16 sm:py-20" : "py-24 sm:py-32 lg:py-40",
+        tight ? "py-12 sm:py-16" : "py-16 sm:py-20 lg:py-24",
         className,
       )}
     />

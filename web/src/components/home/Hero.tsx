@@ -7,7 +7,7 @@ export function Hero() {
   const t = useTranslations("home.hero");
 
   return (
-    <Section className="overflow-hidden pb-20 pt-4 sm:pb-28 sm:pt-6 lg:pt-10">
+    <Section className="overflow-hidden pb-6 pt-4 sm:pb-10 sm:pt-6 lg:pb-14 lg:pt-10">
       <Container>
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-display text-5xl leading-[1.02] font-medium text-balance text-[color:var(--color-ink)] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
