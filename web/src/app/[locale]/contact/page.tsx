@@ -2,7 +2,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { site } from "@/content/site";
 
@@ -44,12 +43,11 @@ export default async function ContactPage({ params }: Props) {
   const t = await getTranslations("contact");
 
   return (
-    <Section className="pb-24 pt-16 sm:pt-20">
+    <Section className="pb-24 pt-4 sm:pt-6">
       <Container>
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <Eyebrow>{t("eyebrow")}</Eyebrow>
-            <h1 className="mt-6 font-display text-5xl text-balance sm:text-6xl">{t("title")}</h1>
+            <h1 className="font-display text-5xl text-balance sm:text-6xl">{t("title")}</h1>
             <p className="mt-6 max-w-md text-pretty text-[color:var(--color-ink-soft)]">
               {t("subtitle")}
             </p>

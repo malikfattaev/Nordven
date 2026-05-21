@@ -28,11 +28,10 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <>
-      <Section className="pb-16 pt-20 sm:pb-20 sm:pt-24">
+      <Section className="pb-12 pt-4 sm:pb-16 sm:pt-6">
         <Container>
           <div className="max-w-4xl">
-            <Eyebrow>{t("eyebrow")}</Eyebrow>
-            <h1 className="mt-6 font-display text-5xl text-balance sm:text-6xl md:text-7xl">
+            <h1 className="font-display text-5xl text-balance sm:text-6xl md:text-7xl">
               {t("title")}
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg text-[color:var(--color-ink-soft)]">
