@@ -4,7 +4,10 @@ import type { ReactNode } from "react";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Nordven ERP",
+  title: {
+    default: "Nordven | ERP",
+    template: "Nordven | %s",
+  },
   description: "Internal operations platform for Nordven Software Lab.",
   robots: { index: false, follow: false },
 };

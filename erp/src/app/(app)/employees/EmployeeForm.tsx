@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState, useTransition, type FormEvent } from "react";
-import { Plus, X } from "lucide-react";
+import { Plus } from "lucide-react";
+import { Modal } from "@/components/ui/Modal";
 import { createEmployeeAction, type EmployeeFormState } from "./actions";
 
 const INITIAL_STATE: EmployeeFormState = {};
@@ -11,6 +12,11 @@ export function EmployeeForm() {
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
   const formRef = useRef<HTMLFormElement>(null);
+
+  function close() {
+    setOpen(false);
+    setError(null);
+  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -27,8 +33,8 @@ export function EmployeeForm() {
     });
   }
 
-  if (!open) {
-    return (
+  return (
+    <>
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -37,62 +43,40 @@ export function EmployeeForm() {
         <Plus size={15} strokeWidth={2} />
         Добавить сотрудника
       </button>
-    );
-  }
 
-  return (
-    <div className="card-surface rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 shadow-[var(--shadow-soft)]">
-      <div className="flex items-center justify-between">
-        <h2 className="font-display text-lg text-[color:var(--color-ink)]">
-          Новый сотрудник
-        </h2>
-        <button
-          type="button"
-          onClick={() => {
-            setOpen(false);
-            setError(null);
-          }}
-          aria-label="Закрыть"
-          className="grid h-8 w-8 place-items-center rounded-full border border-[color:var(--color-line)] text-[color:var(--color-ink-soft)] hover:text-[color:var(--color-ink)]"
-        >
-          <X size={14} strokeWidth={1.75} />
-        </button>
-      </div>
+      <Modal open={open} onClose={close} title="Новый сотрудник">
+        <form ref={formRef} onSubmit={handleSubmit} className="grid gap-4">
+          <Field name="name" label="Имя" autoComplete="given-name" />
+          <Field name="surname" label="Фамилия" autoComplete="family-name" />
+          <Field name="position" label="Должность" placeholder="Например, Senior Engineer" />
+          <Field name="login" label="Логин" autoComplete="off" />
+          <Field name="password" label="Пароль" type="password" autoComplete="new-password" />
 
-      <form ref={formRef} onSubmit={handleSubmit} className="mt-5 grid gap-4 sm:grid-cols-2">
-        <Field name="name" label="Имя" autoComplete="given-name" />
-        <Field name="surname" label="Фамилия" autoComplete="family-name" />
-        <Field name="position" label="Должность" placeholder="Например, Senior Engineer" />
-        <Field name="login" label="Логин" autoComplete="off" />
-        <Field name="password" label="Пароль" type="password" autoComplete="new-password" />
+          {error && (
+            <p className="rounded-lg bg-[color:var(--color-rose-100)] px-3 py-2 text-xs text-[color:var(--color-rose-500)]">
+              {error}
+            </p>
+          )}
 
-        {error && (
-          <p className="sm:col-span-2 rounded-lg bg-[color:var(--color-rose-100)] px-3 py-2 text-xs text-[color:var(--color-rose-500)]">
-            {error}
-          </p>
-        )}
-
-        <div className="sm:col-span-2 flex justify-end gap-3">
-          <button
-            type="button"
-            onClick={() => {
-              setOpen(false);
-              setError(null);
-            }}
-            className="h-10 rounded-full border border-[color:var(--color-line-strong)] px-5 text-sm text-[color:var(--color-ink-soft)] hover:text-[color:var(--color-ink)]"
-          >
-            Отмена
-          </button>
-          <button
-            type="submit"
-            disabled={pending}
-            className="h-10 rounded-full bg-[color:var(--color-ink)] px-5 text-sm font-medium text-[color:var(--color-canvas)] transition-colors duration-200 ease-[var(--ease-soft)] hover:bg-[#2a2824] disabled:opacity-60"
-          >
-            {pending ? "Сохраняем..." : "Сохранить"}
-          </button>
-        </div>
-      </form>
-    </div>
+          <div className="mt-2 flex justify-end gap-3">
+            <button
+              type="button"
+              onClick={close}
+              className="h-10 rounded-full border border-[color:var(--color-line-strong)] px-5 text-sm text-[color:var(--color-ink-soft)] hover:text-[color:var(--color-ink)]"
+            >
+              Отмена
+            </button>
+            <button
+              type="submit"
+              disabled={pending}
+              className="h-10 rounded-full bg-[color:var(--color-ink)] px-5 text-sm font-medium text-[color:var(--color-canvas)] transition-colors duration-200 ease-[var(--ease-soft)] hover:bg-[#2a2824] disabled:opacity-60"
+            >
+              {pending ? "Сохраняем..." : "Сохранить"}
+            </button>
+          </div>
+        </form>
+      </Modal>
+    </>
   );
 }
 
