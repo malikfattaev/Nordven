@@ -2,8 +2,17 @@
   "meta": {
     "title": "Nordven | Software Lab",
     "titleTemplate": "Nordven | %s",
-    "description": "Nordven designs and builds calm, durable software for ambitious teams. Websites, ERP and CRM platforms, and AI solutions - shipped end to end.",
-    "ogAlt": "Nordven"
+    "description": "Nordven is a software lab building websites, ERP and CRM platforms, and AI solutions for ambitious teams. Senior engineering, calm and durable software, delivered end to end in English and Spanish.",
+    "keywords": "software lab, software studio, web design, web development, Next.js, custom ERP, ERP development, CRM software, custom CRM, AI solutions, AI chatbot, AI agent, RAG, LLM, bilingual software, English Spanish",
+    "ogAlt": "Nordven | Software Lab",
+    "about": {
+      "title": "About Nordven",
+      "description": "A senior software studio building websites, ERP, CRM, and AI products. Co-founded by Malik Fattaev (COO) and Shohrukh Normaxmatov (CFO). Small team, senior by default."
+    },
+    "contact": {
+      "title": "Contact Nordven",
+      "description": "Start a conversation about your next website, ERP, CRM, or AI project. We reply within one business day in English or Spanish."
+    }
   },
   "nav": {
     "services": "Services",

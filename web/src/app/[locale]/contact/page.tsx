@@ -12,10 +12,25 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const tNav = await getTranslations({ locale, namespace: "nav" });
-  const tContact = await getTranslations({ locale, namespace: "contact" });
+  const tMeta = await getTranslations({ locale, namespace: "meta" });
+  const canonical = locale === "en" ? "/contact" : `/${locale}/contact`;
   return {
     title: tNav("contact"),
-    description: tContact("subtitle"),
+    description: tMeta("contact.description"),
+    alternates: {
+      canonical,
+      languages: {
+        "en-US": "/contact",
+        "es-ES": "/es/contact",
+        "x-default": "/contact",
+      },
+    },
+    openGraph: {
+      title: tMeta("contact.title"),
+      description: tMeta("contact.description"),
+      url: canonical,
+      type: "website",
+    },
   };
 }
 

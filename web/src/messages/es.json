@@ -2,8 +2,17 @@
   "meta": {
     "title": "Nordven | Software Lab",
     "titleTemplate": "Nordven | %s",
-    "description": "Nordven diseña y construye software duradero y bien pensado para equipos ambiciosos. Sitios web, plataformas de ERP y CRM, y soluciones de IA, entregado de extremo a extremo.",
-    "ogAlt": "Nordven"
+    "description": "Nordven es un laboratorio de software que crea sitios web, plataformas ERP y CRM, y soluciones de IA para equipos ambiciosos. Ingeniería senior, software duradero, entregado de extremo a extremo en inglés y español.",
+    "keywords": "laboratorio de software, estudio de software, diseño web, desarrollo web, Next.js, ERP a medida, desarrollo de ERP, software CRM, CRM personalizado, soluciones de IA, chatbot de IA, agente de IA, RAG, LLM, desarrollo bilingüe, inglés español",
+    "ogAlt": "Nordven | Software Lab",
+    "about": {
+      "title": "Sobre Nordven",
+      "description": "Un estudio senior de software que entrega sitios web, ERP, CRM y productos de IA. Co-fundado por Malik Fattaev (COO) y Shohrukh Normaxmatov (CFO). Equipo pequeño, senior por defecto."
+    },
+    "contact": {
+      "title": "Contactar a Nordven",
+      "description": "Inicia una conversación sobre tu próximo sitio web, ERP, CRM o proyecto de IA. Respondemos en un día hábil en inglés o español."
+    }
   },
   "nav": {
     "services": "Servicios",
