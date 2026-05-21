@@ -17,6 +17,7 @@ out/
 
 # Logs and OS
 *.log
+*.tsbuildinfo
 .DS_Store
 
 # IDE
