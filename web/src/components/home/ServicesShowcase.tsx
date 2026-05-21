@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { CSSProperties } from "react";
-import { Globe, Database, Sparkles, ArrowUpRight, type LucideIcon } from "lucide-react";
+import { Globe, Database, BrainCircuit, ArrowUpRight, type LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -12,7 +12,7 @@ import { cn } from "@/lib/cn";
 const ICONS: Record<ServiceSlug, LucideIcon> = {
   websites: Globe,
   erp: Database,
-  ai: Sparkles,
+  ai: BrainCircuit,
 };
 
 export function ServicesShowcase() {
@@ -52,8 +52,8 @@ export function ServicesShowcase() {
                 )}
               >
                   <div className="flex items-start justify-between">
-                    <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-ink-soft)]">
-                      <Icon size={14} strokeWidth={1.6} aria-hidden />
+                    <span className="inline-flex items-center gap-2 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-ink-soft)]">
+                      <Icon size={15} strokeWidth={1.6} aria-hidden className="shrink-0" />
                       {tServices(`${service.slug}.name`)}
                     </span>
                     <span
