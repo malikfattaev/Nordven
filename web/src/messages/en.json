@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "title": "Nordven - Web, ERP, and Infrastructure for modern teams",
+    "description": "Nordven builds calm, durable software for ambitious teams. Web product, internal platforms, and cloud infrastructure - shipped end to end.",
+    "ogAlt": "Nordven"
+  },
+  "nav": {
+    "services": "Services",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "startProject": "Start a project",
+    "language": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "footer": {
+    "tagline": "Calm, durable software for teams that move quickly.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "All rights reserved.",
+    "based": "Operating worldwide."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Studio for product and platform engineering",
+      "titleA": "Software that feels",
+      "titleEm": "considered",
+      "titleB": "from the first pixel to the last deploy.",
+      "subtitle": "We design, build, and operate web products, internal ERP platforms, and the cloud infrastructure underneath them - as one team, on one timeline.",
+      "primaryCta": "Start a project",
+      "secondaryCta": "See our work",
+      "badge": "Booking Q3 engagements"
+    },
+    "marquee": {
+      "title": "Trusted by teams shipping in regulated, high-traffic, and zero-to-one environments."
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Three practices. One throughline.",
+      "subtitle": "Every engagement starts with the same question: what would a calm, well-engineered version of this look like?",
+      "exploreCta": "Explore practice"
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "A short loop, repeated until it ships.",
+      "subtitle": "No discovery theater, no 80-page decks. We commit to a small slice, ship it, and let the next slice be informed by what we learned.",
+      "steps": [
+        {
+          "title": "Frame",
+          "body": "One week to align on outcomes, constraints, and the smallest meaningful first release."
+        },
+        {
+          "title": "Design",
+          "body": "Interface, data model, and infrastructure designed together - never in isolation."
+        },
+        {
+          "title": "Build",
+          "body": "Weekly demos in a real environment. Pull requests, not status updates."
+        },
+        {
+          "title": "Operate",
+          "body": "We stay on after launch: monitoring, iteration, on-call rotation if you want it."
+        }
+      ]
+    },
+    "metrics": {
+      "eyebrow": "Outcomes, not output",
+      "items": [
+        { "label": "Average time to first production deploy", "value": "12 days" },
+        { "label": "Engagements running 12+ months in", "value": "78%" },
+        { "label": "Practices under one roof", "value": "3" },
+        { "label": "Time zones we cover daily", "value": "5" }
+      ]
+    },
+    "cta": {
+      "title": "Have something complex on the roadmap?",
+      "subtitle": "Send a short note. You will hear back from a human within one business day.",
+      "primary": "Start a project",
+      "secondary": "hello@nordven.com"
+    }
+  },
+  "services": {
+    "common": {
+      "capabilities": "Capabilities",
+      "stack": "A typical stack",
+      "engagement": "Engagement",
+      "back": "All services",
+      "next": "Next practice",
+      "talk": "Talk to us about this"
+    },
+    "web": {
+      "name": "Web",
+      "short": "Product and marketing experiences that load fast and age well.",
+      "tagline": "Interfaces with taste.",
+      "intro": "Marketing sites, SaaS dashboards, and customer-facing portals - built with the same engineering rigor you would put behind a backend service.",
+      "capabilities": [
+        {
+          "title": "Marketing and brand sites",
+          "body": "Editable, performant sites that the marketing team actually wants to use."
+        },
+        {
+          "title": "SaaS interfaces",
+          "body": "Dashboards, settings, billing, admin - the unglamorous surfaces, made calm."
+        },
+        {
+          "title": "Design systems",
+          "body": "A shared visual language between design and engineering, codified in tokens and components."
+        },
+        {
+          "title": "Performance and accessibility",
+          "body": "Core Web Vitals in the green, WCAG 2.2 AA as a baseline, not an afterthought."
+        }
+      ],
+      "engagement": "Most web engagements run six to twelve weeks for a first release, then continue as a retained partnership."
+    },
+    "erp": {
+      "name": "ERP",
+      "short": "Internal platforms that replace the spreadsheet sprawl.",
+      "tagline": "The system your business actually runs on.",
+      "intro": "Custom ERP, CRM, and operations platforms designed around how your team really works - not how a SaaS vendor wishes you did.",
+      "capabilities": [
+        {
+          "title": "Workflow and approvals",
+          "body": "Multi-step processes, role-based access, audit trails that survive an audit."
+        },
+        {
+          "title": "Integrations",
+          "body": "Finance, payments, identity, communications - connected through typed contracts, not brittle scripts."
+        },
+        {
+          "title": "Reporting and analytics",
+          "body": "Operational dashboards that update in real time and read like sentences, not pivot tables."
+        },
+        {
+          "title": "Migration from legacy",
+          "body": "Spreadsheets, Airtable, aging in-house tools - migrated with the data and the institutional knowledge intact."
+        }
+      ],
+      "engagement": "ERP engagements start with a four-week framing sprint to map the domain, then move into incremental delivery."
+    },
+    "infra": {
+      "name": "Infra",
+      "short": "Quiet, observable cloud foundations.",
+      "tagline": "The platform under the product.",
+      "intro": "Cloud architecture, CI/CD, and observability that lets your team ship daily without paging anyone at night.",
+      "capabilities": [
+        {
+          "title": "Cloud architecture",
+          "body": "Right-sized AWS, GCP, or hybrid environments - codified in Terraform, reviewed like product code."
+        },
+        {
+          "title": "CI/CD and developer experience",
+          "body": "Pipelines that finish in minutes, previews on every pull request, rollbacks that just work."
+        },
+        {
+          "title": "Observability",
+          "body": "Logs, metrics, and traces wired together - so the first question is always answered by a dashboard."
+        },
+        {
+          "title": "Reliability and on-call",
+          "body": "Runbooks, SLOs, and an optional shared on-call rotation while your team grows into its own."
+        }
+      ],
+      "engagement": "Infra engagements typically start with a two-week audit, followed by a structured remediation plan."
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A small, senior team. On purpose.",
+    "lead": "Nordven is a studio of engineers and designers who have shipped together for years. We keep the team small so the people who scope your project are the same people who write the code and answer the on-call page.",
+    "values": [
+      {
+        "title": "Senior by default",
+        "body": "Every person on your project has shipped production software for a decade or more."
+      },
+      {
+        "title": "One throughline",
+        "body": "Web, ERP, and Infra under one team - no integration drama between vendors."
+      },
+      {
+        "title": "Calm by design",
+        "body": "We optimize for software that does not page anyone at 2 a.m. - including us."
+      },
+      {
+        "title": "Outcomes we can name",
+        "body": "Each engagement has a measurable outcome we can describe in a single sentence."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell us about the project.",
+    "subtitle": "A few sentences is plenty. We will reply within one business day with a calendar link.",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "Avery Stone",
+      "email": "Work email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Company, Inc.",
+      "service": "Practice of interest",
+      "servicePlaceholder": "Choose one",
+      "message": "What are you working on?",
+      "messagePlaceholder": "A short description is plenty.",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Thank you. We will be in touch shortly.",
+      "error": "Something went wrong. Please try again or email hello@nordven.com.",
+      "validation": {
+        "nameTooShort": "Please enter your name.",
+        "emailInvalid": "Please enter a valid email.",
+        "messageTooShort": "A sentence or two helps us prepare."
+      }
+    },
+    "direct": {
+      "title": "Prefer email?",
+      "body": "Write to <link>{address}</link>. We read every message."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you were looking for has moved or never existed.",
+    "cta": "Back to home"
+  }
+}

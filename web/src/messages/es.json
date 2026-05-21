@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "title": "Nordven - Web, ERP e Infraestructura para equipos modernos",
+    "description": "Nordven crea software duradero y bien pensado para equipos ambiciosos. Producto web, plataformas internas e infraestructura en la nube, entregado de extremo a extremo.",
+    "ogAlt": "Nordven"
+  },
+  "nav": {
+    "services": "Servicios",
+    "process": "Proceso",
+    "about": "Estudio",
+    "contact": "Contacto",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "startProject": "Iniciar proyecto",
+    "language": "Idioma",
+    "skipToContent": "Saltar al contenido"
+  },
+  "footer": {
+    "tagline": "Software duradero para equipos que avanzan rápido.",
+    "services": "Servicios",
+    "company": "Estudio",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "rights": "Todos los derechos reservados.",
+    "based": "Operamos en todo el mundo."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Estudio de ingeniería de producto y plataforma",
+      "titleA": "Software que se siente",
+      "titleEm": "considerado",
+      "titleB": "desde el primer pixel hasta el último despliegue.",
+      "subtitle": "Diseñamos, construimos y operamos productos web, plataformas ERP internas y la infraestructura en la nube que los sostiene, como un solo equipo en un solo plan.",
+      "primaryCta": "Iniciar proyecto",
+      "secondaryCta": "Ver nuestro trabajo",
+      "badge": "Tomando proyectos para Q3"
+    },
+    "marquee": {
+      "title": "Equipos en entornos regulados, de alto tráfico y de cero a uno confían en nosotros."
+    },
+    "services": {
+      "eyebrow": "Lo que hacemos",
+      "title": "Tres prácticas. Una sola línea.",
+      "subtitle": "Cada proyecto empieza con la misma pregunta: ¿cómo se vería una versión calma y bien hecha de esto?",
+      "exploreCta": "Ver práctica"
+    },
+    "process": {
+      "eyebrow": "Cómo trabajamos",
+      "title": "Un ciclo corto, repetido hasta lanzar.",
+      "subtitle": "Sin teatro de descubrimiento, sin presentaciones de 80 páginas. Nos comprometemos con una rebanada pequeña, la lanzamos y dejamos que lo aprendido guíe la siguiente.",
+      "steps": [
+        {
+          "title": "Encuadre",
+          "body": "Una semana para alinear resultados, restricciones y el primer lanzamiento mínimo que tenga sentido."
+        },
+        {
+          "title": "Diseño",
+          "body": "Interfaz, modelo de datos e infraestructura diseñados juntos, nunca por separado."
+        },
+        {
+          "title": "Construcción",
+          "body": "Demos semanales en un entorno real. Pull requests, no reportes de estado."
+        },
+        {
+          "title": "Operación",
+          "body": "Acompañamos después del lanzamiento: monitoreo, iteración y guardia compartida si la quieres."
+        }
+      ]
+    },
+    "metrics": {
+      "eyebrow": "Resultados, no entregables",
+      "items": [
+        { "label": "Tiempo promedio al primer despliegue en producción", "value": "12 días" },
+        { "label": "Proyectos que continúan más de 12 meses", "value": "78%" },
+        { "label": "Prácticas bajo un mismo techo", "value": "3" },
+        { "label": "Zonas horarias que cubrimos a diario", "value": "5" }
+      ]
+    },
+    "cta": {
+      "title": "¿Tienes algo complejo en la hoja de ruta?",
+      "subtitle": "Escríbenos unas líneas. Te responderá una persona en menos de un día hábil.",
+      "primary": "Iniciar proyecto",
+      "secondary": "hello@nordven.com"
+    }
+  },
+  "services": {
+    "common": {
+      "capabilities": "Capacidades",
+      "stack": "Stack típico",
+      "engagement": "Compromiso",
+      "back": "Todos los servicios",
+      "next": "Siguiente práctica",
+      "talk": "Hablemos sobre esto"
+    },
+    "web": {
+      "name": "Web",
+      "short": "Experiencias de producto y marketing que cargan rápido y envejecen bien.",
+      "tagline": "Interfaces con criterio.",
+      "intro": "Sitios de marketing, paneles SaaS y portales para clientes, construidos con el mismo rigor de ingeniería que pondrías detrás de un servicio backend.",
+      "capabilities": [
+        {
+          "title": "Sitios de marca y marketing",
+          "body": "Sitios editables y veloces que el equipo de marketing usa con gusto."
+        },
+        {
+          "title": "Interfaces SaaS",
+          "body": "Paneles, configuración, facturación, administración - las superficies poco glamorosas, hechas con calma."
+        },
+        {
+          "title": "Sistemas de diseño",
+          "body": "Un lenguaje visual compartido entre diseño e ingeniería, codificado en tokens y componentes."
+        },
+        {
+          "title": "Rendimiento y accesibilidad",
+          "body": "Core Web Vitals en verde y WCAG 2.2 AA como punto de partida, no como nota al pie."
+        }
+      ],
+      "engagement": "La mayoría de los proyectos web duran de seis a doce semanas hasta el primer lanzamiento, y continúan como acuerdo de soporte."
+    },
+    "erp": {
+      "name": "ERP",
+      "short": "Plataformas internas que reemplazan el desorden de hojas de cálculo.",
+      "tagline": "El sistema sobre el que tu empresa realmente opera.",
+      "intro": "ERP, CRM y plataformas operativas a medida, diseñados según cómo tu equipo trabaja de verdad y no como un vendedor SaaS imagina que deberías trabajar.",
+      "capabilities": [
+        {
+          "title": "Flujos y aprobaciones",
+          "body": "Procesos de varios pasos, control por roles y rastros de auditoría que sobreviven una auditoría."
+        },
+        {
+          "title": "Integraciones",
+          "body": "Finanzas, pagos, identidad, comunicaciones - conectadas por contratos tipados, no scripts frágiles."
+        },
+        {
+          "title": "Reportes y analítica",
+          "body": "Tableros operativos en tiempo real que se leen como frases, no como tablas dinámicas."
+        },
+        {
+          "title": "Migración desde sistemas heredados",
+          "body": "Hojas de cálculo, Airtable, herramientas internas envejecidas - migradas con datos y conocimiento intacto."
+        }
+      ],
+      "engagement": "Los proyectos ERP comienzan con un sprint de encuadre de cuatro semanas para mapear el dominio y luego pasan a entregas incrementales."
+    },
+    "infra": {
+      "name": "Infra",
+      "short": "Fundaciones de nube silenciosas y observables.",
+      "tagline": "La plataforma bajo el producto.",
+      "intro": "Arquitectura cloud, CI/CD y observabilidad para que tu equipo despliegue a diario sin despertar a nadie de noche.",
+      "capabilities": [
+        {
+          "title": "Arquitectura cloud",
+          "body": "Entornos AWS, GCP o híbridos del tamaño adecuado - codificados en Terraform y revisados como código de producto."
+        },
+        {
+          "title": "CI/CD y experiencia de desarrollo",
+          "body": "Pipelines que terminan en minutos, previsualizaciones en cada pull request y rollbacks que simplemente funcionan."
+        },
+        {
+          "title": "Observabilidad",
+          "body": "Logs, métricas y trazas conectados - la primera pregunta siempre se responde con un tablero."
+        },
+        {
+          "title": "Fiabilidad y guardia",
+          "body": "Runbooks, SLOs y una guardia compartida opcional mientras tu equipo crece hacia la propia."
+        }
+      ],
+      "engagement": "Los proyectos de infra suelen empezar con una auditoría de dos semanas, seguida de un plan de remediación estructurado."
+    }
+  },
+  "about": {
+    "eyebrow": "Estudio",
+    "title": "Un equipo pequeño y senior. A propósito.",
+    "lead": "Nordven es un estudio de ingenieros y diseñadores que han trabajado juntos por años. Mantenemos el equipo pequeño para que quien define tu proyecto sea también quien escribe el código y atiende la guardia.",
+    "values": [
+      {
+        "title": "Senior por defecto",
+        "body": "Cada persona en tu proyecto ha entregado software en producción durante una década o más."
+      },
+      {
+        "title": "Una sola línea",
+        "body": "Web, ERP e Infra bajo un mismo equipo - sin dramas de integración entre proveedores."
+      },
+      {
+        "title": "Calma por diseño",
+        "body": "Optimizamos por software que no despierta a nadie a las 2 a.m. - incluidos nosotros."
+      },
+      {
+        "title": "Resultados con nombre",
+        "body": "Cada proyecto tiene un resultado medible que podemos describir en una sola frase."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Cuéntanos sobre tu proyecto.",
+    "subtitle": "Unas frases son suficientes. Te responderemos en menos de un día hábil con un enlace para agendar.",
+    "form": {
+      "name": "Tu nombre",
+      "namePlaceholder": "Avery Stone",
+      "email": "Correo de trabajo",
+      "emailPlaceholder": "tu@empresa.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Empresa, Inc.",
+      "service": "Práctica de interés",
+      "servicePlaceholder": "Elige una",
+      "message": "¿En qué estás trabajando?",
+      "messagePlaceholder": "Una breve descripción es suficiente.",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "success": "Gracias. Estaremos en contacto pronto.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos a hello@nordven.com.",
+      "validation": {
+        "nameTooShort": "Por favor escribe tu nombre.",
+        "emailInvalid": "Por favor escribe un correo válido.",
+        "messageTooShort": "Una o dos frases nos ayudan a preparar la respuesta."
+      }
+    },
+    "direct": {
+      "title": "¿Prefieres correo?",
+      "body": "Escribe a <link>{address}</link>. Leemos cada mensaje."
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "subtitle": "La página que buscabas se movió o nunca existió.",
+    "cta": "Volver al inicio"
+  }
+}
