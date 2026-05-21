@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { locales } from "@/i18n/routing";
-import { serviceSlugs } from "@/content/services";
+import { contactInterestSlugs } from "@/content/services";
 import { deliverLead } from "@/lib/leads";
 
 const payloadSchema = z.object({
   name: z.string().trim().min(2).max(120),
   email: z.string().trim().email().max(240),
   company: z.string().trim().max(160).optional(),
-  serviceInterest: z.enum(serviceSlugs).optional(),
+  serviceInterest: z.enum(contactInterestSlugs).optional(),
   message: z.string().trim().min(10).max(5000),
   locale: z.enum(locales),
 });

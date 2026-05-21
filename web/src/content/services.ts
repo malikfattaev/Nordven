@@ -11,3 +11,6 @@ export const services: ReadonlyArray<ServiceDefinition> = [
   { slug: "erp", number: "02" },
   { slug: "ai", number: "03" },
 ] as const;
+
+export const contactInterestSlugs = [...serviceSlugs, "other"] as const;
+export type ContactInterestSlug = (typeof contactInterestSlugs)[number];

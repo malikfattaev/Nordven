@@ -1,6 +1,7 @@
 {
   "meta": {
-    "title": "Nordven - Websites, ERP & CRM, and AI for modern teams",
+    "title": "Nordven | Software Lab",
+    "titleTemplate": "Nordven | %s",
     "description": "Nordven designs and builds calm, durable software for ambitious teams. Websites, ERP and CRM platforms, and AI solutions - shipped end to end.",
     "ogAlt": "Nordven"
   },
@@ -77,6 +78,9 @@
       "name": "AI Solutions",
       "short": "Chatbots, agents, RAG search, analytics models, or AI built into the product itself - whatever the team actually needs.",
       "tagline": "AI that earns its place on the team."
+    },
+    "other": {
+      "name": "Something else"
     }
   },
   "about": {
@@ -128,16 +132,17 @@
       "submit": "Send message",
       "submitting": "Sending...",
       "success": "Thank you. We will be in touch shortly.",
-      "error": "Something went wrong. Please try again or email hello@nordven.com.",
+      "error": "Something went wrong. Please try again or email sales@nordvenlab.com.",
       "validation": {
         "nameTooShort": "Please enter your name.",
         "emailInvalid": "Please enter a valid email.",
         "messageTooShort": "A sentence or two helps us prepare."
       }
     },
-    "direct": {
-      "title": "Prefer email?",
-      "body": "Write to <link>{address}</link>. We read every message."
+    "channels": {
+      "eyebrow": "Or reach us directly",
+      "email": { "label": "Email" },
+      "instagram": { "label": "Instagram" }
     }
   },
   "notFound": {

@@ -1,6 +1,7 @@
 {
   "meta": {
-    "title": "Nordven - Sitios web, ERP y CRM, e IA para equipos modernos",
+    "title": "Nordven | Software Lab",
+    "titleTemplate": "Nordven | %s",
     "description": "Nordven diseña y construye software duradero y bien pensado para equipos ambiciosos. Sitios web, plataformas de ERP y CRM, y soluciones de IA, entregado de extremo a extremo.",
     "ogAlt": "Nordven"
   },
@@ -77,6 +78,9 @@
       "name": "Soluciones IA",
       "short": "Chatbots, agentes, búsqueda RAG, modelos analíticos o IA dentro del producto mismo, lo que el equipo realmente necesite.",
       "tagline": "IA que se gana su lugar en el equipo."
+    },
+    "other": {
+      "name": "Otra cosa"
     }
   },
   "about": {
@@ -128,16 +132,17 @@
       "submit": "Enviar mensaje",
       "submitting": "Enviando...",
       "success": "Gracias. Estaremos en contacto pronto.",
-      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos a hello@nordven.com.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos a sales@nordvenlab.com.",
       "validation": {
         "nameTooShort": "Por favor escribe tu nombre.",
         "emailInvalid": "Por favor escribe un correo válido.",
         "messageTooShort": "Una o dos frases nos ayudan a preparar la respuesta."
       }
     },
-    "direct": {
-      "title": "¿Prefieres correo?",
-      "body": "Escribe a <link>{address}</link>. Leemos cada mensaje."
+    "channels": {
+      "eyebrow": "O contáctanos directamente",
+      "email": { "label": "Correo" },
+      "instagram": { "label": "Instagram" }
     }
   },
   "notFound": {

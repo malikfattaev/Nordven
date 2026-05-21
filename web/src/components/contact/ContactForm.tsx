@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 import { Button } from "@/components/ui/Button";
-import { serviceSlugs } from "@/content/services";
+import { contactInterestSlugs } from "@/content/services";
 import { cn } from "@/lib/cn";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -127,7 +127,7 @@ export function ContactForm() {
             <option value="" disabled>
               {t("servicePlaceholder")}
             </option>
-            {serviceSlugs.map((slug) => (
+            {contactInterestSlugs.map((slug) => (
               <option key={slug} value={slug}>
                 {tServices(`${slug}.name`)}
               </option>

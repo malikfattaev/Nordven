@@ -13,10 +13,11 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "about" });
+  const tNav = await getTranslations({ locale, namespace: "nav" });
+  const tAbout = await getTranslations({ locale, namespace: "about" });
   return {
-    title: t("title"),
-    description: t("lead"),
+    title: tNav("about"),
+    description: tAbout("lead"),
   };
 }
 

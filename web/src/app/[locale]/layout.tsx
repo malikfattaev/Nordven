@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(publicEnv.NEXT_PUBLIC_SITE_URL),
     title: {
       default: t("title"),
-      template: "%s - Nordven",
+      template: t("titleTemplate"),
     },
     description: t("description"),
     openGraph: {

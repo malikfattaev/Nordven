@@ -1,12 +1,12 @@
 import { serverEnv } from "@/lib/env";
 import type { Locale } from "@/i18n/routing";
-import type { ServiceSlug } from "@/content/services";
+import type { ContactInterestSlug } from "@/content/services";
 
 export type Lead = {
   name: string;
   email: string;
   company?: string;
-  serviceInterest?: ServiceSlug;
+  serviceInterest?: ContactInterestSlug;
   message: string;
   locale: Locale;
 };

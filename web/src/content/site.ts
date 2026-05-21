@@ -1,10 +1,13 @@
 export const site = {
   name: "Nordven",
-  domain: "nordven.com",
-  email: "hello@nordven.com",
+  tagline: "Software Lab",
+  domain: "nordvenlab.com",
+  email: "sales@nordvenlab.com",
   socials: {
-    linkedin: "https://www.linkedin.com/company/nordven",
-    github: "https://github.com/malikfattaev",
+    instagram: {
+      handle: "nordvenlab",
+      url: "https://instagram.com/nordvenlab",
+    },
   },
   founded: 2023,
 } as const;
