@@ -60,33 +60,16 @@ export function LocaleSwitcher({ className }: { className?: string }) {
         aria-label={t("language")}
         onClick={() => setOpen((v) => !v)}
         className={cn(
-          "relative inline-flex items-center pr-4 text-[15px] text-[color:var(--color-ink-soft)] transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)] focus:outline-none focus-visible:text-[color:var(--color-ink)]",
+          "inline-flex items-center text-[15px] text-[color:var(--color-ink-soft)] transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)] focus:outline-none focus-visible:text-[color:var(--color-ink)]",
           isPending && "opacity-70",
         )}
       >
         <span>{labels[active]}</span>
-        <svg
-          width="10"
-          height="10"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden
-          className={cn(
-            "absolute left-full top-1/2 -translate-y-1/2 transition-transform duration-300 ease-[var(--ease-soft)]",
-            open && "-translate-y-1/2 rotate-180",
-          )}
-        >
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
       </button>
 
       <div
         className={cn(
-          "absolute left-[calc(50%-0.5rem)] top-full z-30 -translate-x-1/2 pt-3 transition-[opacity,transform] duration-200 ease-[var(--ease-soft)]",
+          "absolute left-1/2 top-full z-30 -translate-x-1/2 pt-3 transition-[opacity,transform] duration-200 ease-[var(--ease-soft)]",
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-1 opacity-0",
