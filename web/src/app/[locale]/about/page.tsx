@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
 
 const VALUE_KEYS = ["0", "1", "2", "3"] as const;
+const TEAM_KEYS = ["0", "1"] as const;
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -24,11 +24,10 @@ export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
-  const tCta = await getTranslations("home.cta");
 
   return (
     <>
-      <Section className="pb-20 pt-20 sm:pb-28 sm:pt-24">
+      <Section className="pb-16 pt-20 sm:pb-20 sm:pt-24">
         <Container>
           <div className="max-w-4xl">
             <Eyebrow>{t("eyebrow")}</Eyebrow>
@@ -42,7 +41,7 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </Section>
 
-      <Section className="border-y border-[color:var(--color-line)] bg-[color:var(--color-canvas-elevated)]">
+      <Section tight>
         <Container>
           <dl className="grid gap-x-12 gap-y-12 md:grid-cols-2">
             {VALUE_KEYS.map((key, i) => (
@@ -64,16 +63,32 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </Section>
 
-      <Section>
+      <Section tight>
         <Container>
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-            <h2 className="max-w-xl font-display text-3xl text-balance sm:text-4xl">
-              {tCta("title")}
-            </h2>
-            <Button href="/contact" size="lg">
-              {tCta("primary")}
-            </Button>
+          <div className="grid items-end gap-8 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <Eyebrow>{t("team.eyebrow")}</Eyebrow>
+              <h2 className="mt-4 font-display text-4xl text-balance sm:text-5xl">
+                {t("team.title")}
+              </h2>
+            </div>
           </div>
+
+          <ul className="mt-12 grid gap-5 md:grid-cols-2">
+            {TEAM_KEYS.map((key) => (
+              <li
+                key={key}
+                className="rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8"
+              >
+                <p className="font-display text-2xl text-[color:var(--color-ink)] sm:text-3xl">
+                  {t(`team.members.${key}.name`)}
+                </p>
+                <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[color:var(--color-ink-soft)]">
+                  {t(`team.members.${key}.role`)}
+                </p>
+              </li>
+            ))}
+          </ul>
         </Container>
       </Section>
     </>

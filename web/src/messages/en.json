@@ -81,8 +81,8 @@
     },
     "ai": {
       "name": "AI Solutions",
-      "short": "RAG, agents, and bespoke models, shipped with the same reliability bar as the rest of your stack.",
-      "tagline": "AI woven into the product, not bolted on."
+      "short": "Chatbots, agents, RAG search, analytics models, or AI built into the product itself - whatever the team actually needs.",
+      "tagline": "AI that earns its place on the team."
     }
   },
   "about": {
@@ -106,7 +106,15 @@
         "title": "Outcomes we can name",
         "body": "Each engagement has a measurable outcome we can describe in a single sentence."
       }
-    ]
+    ],
+    "team": {
+      "eyebrow": "Team",
+      "title": "The people behind it.",
+      "members": [
+        { "name": "Malik Fattaev", "role": "COO & Co-Founder" },
+        { "name": "Shohrukh Normaxmatov", "role": "CFO & Co-Founder" }
+      ]
+    }
   },
   "contact": {
     "eyebrow": "Contact",

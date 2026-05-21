@@ -3,7 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { services } from "@/content/services";
-import { cn } from "@/lib/cn";
 
 export function ServicesShowcase() {
   const t = useTranslations("home.services");
@@ -28,24 +27,13 @@ export function ServicesShowcase() {
           {services.map((service) => (
             <li
               key={service.slug}
-              className="relative flex min-h-[20rem] flex-col justify-between rounded-[var(--radius-card)] border border-[color:var(--color-line)] bg-[color:var(--color-canvas-elevated)] p-8"
+              className="relative flex min-h-[20rem] flex-col justify-between rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8"
             >
-              <div
-                aria-hidden
-                className="absolute inset-x-8 top-0 h-px"
-                style={{ background: service.theme.accent }}
-              />
-
               <div className="flex items-start justify-between">
                 <span className="font-mono text-xs tracking-[0.22em] text-[color:var(--color-ink-muted)]">
                   {service.number}
                 </span>
-                <span
-                  className={cn(
-                    "rounded-full px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em]",
-                    service.theme.badge,
-                  )}
-                >
+                <span className="rounded-full border border-[color:var(--color-line-strong)] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-[color:var(--color-ink-soft)]">
                   {tServices(`${service.slug}.name`)}
                 </span>
               </div>

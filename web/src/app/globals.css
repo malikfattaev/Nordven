@@ -6,7 +6,7 @@
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --color-canvas: #fbf8f3;
-  --color-canvas-elevated: #ffffff;
+  --color-canvas-elevated: #fbf8f3;
   --color-ink: #161513;
   --color-ink-soft: #5b574f;
   --color-ink-muted: #8c877d;
@@ -59,6 +59,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  [id] {
+    scroll-margin-top: 1.5rem;
   }
 
   body {

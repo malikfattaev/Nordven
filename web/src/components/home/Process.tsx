@@ -9,7 +9,7 @@ export function Process() {
   const t = useTranslations("home.process");
 
   return (
-    <Section id="process" className="bg-[color:var(--color-canvas-elevated)] border-y border-[color:var(--color-line)]">
+    <Section id="process">
       <Container>
         <div className="grid gap-8 md:grid-cols-12">
           <div className="md:col-span-5">

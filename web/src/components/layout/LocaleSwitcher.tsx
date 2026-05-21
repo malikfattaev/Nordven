@@ -60,7 +60,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
         aria-label={t("language")}
         onClick={() => setOpen((v) => !v)}
         className={cn(
-          "inline-flex h-10 min-w-[3.25rem] items-center justify-center gap-1.5 rounded-full border border-[color:var(--color-line-strong)] bg-[color:var(--color-canvas-elevated)] px-3.5 text-xs font-medium text-[color:var(--color-ink)] transition-colors duration-300 ease-[var(--ease-soft)] hover:border-[color:var(--color-ink)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-ink)]",
+          "inline-flex items-center gap-1 text-[15px] text-[color:var(--color-ink-soft)] transition-colors duration-300 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)] focus:outline-none focus-visible:text-[color:var(--color-ink)]",
           isPending && "opacity-70",
         )}
       >
@@ -71,7 +71,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
           aria-hidden
@@ -83,7 +83,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
 
       <div
         className={cn(
-          "absolute left-0 right-0 top-full z-30 pt-2 transition-all duration-200 ease-[var(--ease-soft)]",
+          "absolute left-1/2 top-full z-30 -translate-x-1/2 pt-3 transition-all duration-200 ease-[var(--ease-soft)]",
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-1 opacity-0",
@@ -91,16 +91,16 @@ export function LocaleSwitcher({ className }: { className?: string }) {
       >
         <ul
           role="listbox"
-          className="flex flex-col gap-1 rounded-2xl border border-[color:var(--color-line-strong)] bg-[color:var(--color-canvas-elevated)] p-1 shadow-[var(--shadow-soft)]"
+          className="flex min-w-[3rem] flex-col items-center gap-0.5 rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-canvas)] p-1 shadow-[var(--shadow-soft)]"
         >
           {others.map((code) => (
-            <li key={code}>
+            <li key={code} className="w-full">
               <button
                 type="button"
                 role="option"
                 aria-selected={false}
                 onClick={() => setLocale(code)}
-                className="w-full rounded-full px-3 py-1.5 text-center text-xs font-medium text-[color:var(--color-ink-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:bg-[color:var(--color-ink)] hover:text-[color:var(--color-canvas)] focus:outline-none focus-visible:bg-[color:var(--color-ink)] focus-visible:text-[color:var(--color-canvas)]"
+                className="w-full rounded-lg px-3 py-1.5 text-center text-[15px] text-[color:var(--color-ink-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)] focus:outline-none focus-visible:text-[color:var(--color-ink)]"
               >
                 {labels[code]}
               </button>

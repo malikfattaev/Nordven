@@ -81,8 +81,8 @@
     },
     "ai": {
       "name": "Soluciones IA",
-      "short": "RAG, agentes y modelos a medida, entregados con el mismo estándar de fiabilidad que el resto del stack.",
-      "tagline": "IA integrada en el producto, no pegada por fuera."
+      "short": "Chatbots, agentes, búsqueda RAG, modelos analíticos o IA dentro del producto mismo, lo que el equipo realmente necesite.",
+      "tagline": "IA que se gana su lugar en el equipo."
     }
   },
   "about": {
@@ -106,7 +106,15 @@
         "title": "Resultados con nombre",
         "body": "Cada proyecto tiene un resultado medible que podemos describir en una sola frase."
       }
-    ]
+    ],
+    "team": {
+      "eyebrow": "Equipo",
+      "title": "Las personas detrás del estudio.",
+      "members": [
+        { "name": "Malik Fattaev", "role": "COO y Co-Fundador" },
+        { "name": "Shohrukh Normaxmatov", "role": "CFO y Co-Fundador" }
+      ]
+    }
   },
   "contact": {
     "eyebrow": "Contacto",

@@ -6,7 +6,7 @@ ARG NODE_VERSION=20.18.0
 FROM node:${NODE_VERSION}-alpine AS deps
 WORKDIR /app
 RUN apk add --no-cache libc6-compat
-COPY package.json package-lock.json ./
+COPY web/package.json web/package-lock.json ./
 RUN npm ci --no-audit --no-fund
 
 # 2. Build the application
@@ -14,7 +14,7 @@ FROM node:${NODE_VERSION}-alpine AS builder
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
 COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+COPY web/ .
 RUN npm run build
 
 # 3. Production runtime image
