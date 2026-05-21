@@ -55,7 +55,7 @@
     },
     "metrics": {
       "items": [
-        { "label": "Average time to first production deploy", "value": "7 days" },
+        { "label": "Average time to first production deploy", "value": "14 days" },
         { "label": "Projects shipped", "value": "9" }
       ]
     }

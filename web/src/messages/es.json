@@ -55,7 +55,7 @@
     },
     "metrics": {
       "items": [
-        { "label": "Tiempo promedio al primer despliegue en producción", "value": "7 días" },
+        { "label": "Tiempo promedio al primer despliegue en producción", "value": "14 días" },
         { "label": "Proyectos entregados", "value": "9" }
       ]
     }

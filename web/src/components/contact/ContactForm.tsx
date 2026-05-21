@@ -91,7 +91,7 @@ export function ContactForm() {
   }
 
   return (
-    <form noValidate onSubmit={handleSubmit} className="grid gap-6">
+    <form noValidate onSubmit={handleSubmit} className="flex h-full flex-col gap-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <Field
           label={t("name")}
@@ -136,7 +136,7 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div className="grid gap-2">
+      <div className="flex flex-1 flex-col gap-2">
         <label htmlFor="message" className={labelClasses}>
           {t("message")}
         </label>
@@ -145,7 +145,7 @@ export function ContactForm() {
           name="message"
           placeholder={t("messagePlaceholder")}
           rows={6}
-          className={cn(fieldClasses, "resize-none")}
+          className={cn(fieldClasses, "min-h-[10rem] flex-1 resize-none")}
           required
         />
         {errors.message && <p className="text-xs text-[color:var(--color-peach-500)]">{errors.message}</p>}
