@@ -60,12 +60,6 @@
         { "label": "Tiempo promedio al primer despliegue en producción", "value": "7 días" },
         { "label": "Proyectos entregados", "value": "9" }
       ]
-    },
-    "cta": {
-      "title": "¿Tienes algo complejo en la hoja de ruta?",
-      "subtitle": "Escríbenos unas líneas. Te responderá una persona en menos de un día hábil.",
-      "primary": "Iniciar proyecto",
-      "secondary": "hello@nordven.com"
     }
   },
   "services": {

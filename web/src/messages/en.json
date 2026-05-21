@@ -60,12 +60,6 @@
         { "label": "Average time to first production deploy", "value": "7 days" },
         { "label": "Projects shipped", "value": "9" }
       ]
-    },
-    "cta": {
-      "title": "Have something complex on the roadmap?",
-      "subtitle": "Send a short note. You will hear back from a human within one business day.",
-      "primary": "Start a project",
-      "secondary": "hello@nordven.com"
     }
   },
   "services": {
