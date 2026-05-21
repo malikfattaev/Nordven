@@ -23,18 +23,13 @@ export default async function LoginPage({ searchParams }: Props) {
         }}
       />
       <div className="w-full max-w-sm">
-        <div className="text-center">
-          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-[color:var(--color-ink-muted)]">
-            Nordven Internal
-          </p>
-          <h1 className="mt-4 font-display text-4xl text-[color:var(--color-ink)]">ERP</h1>
-          <p className="mt-2 text-sm text-[color:var(--color-ink-soft)]">
-            Войдите, чтобы продолжить.
-          </p>
-        </div>
-
-        <div className="card-surface mt-10 rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-7 shadow-[var(--shadow-soft)]">
-          <LoginForm next={next} />
+        <div className="card-surface rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8 shadow-[var(--shadow-soft)]">
+          <h1 className="text-center font-display text-3xl font-medium tracking-[-0.01em] text-[color:var(--color-ink)]">
+            Nordven
+          </h1>
+          <div className="mt-7">
+            <LoginForm next={next} />
+          </div>
         </div>
       </div>
     </main>
