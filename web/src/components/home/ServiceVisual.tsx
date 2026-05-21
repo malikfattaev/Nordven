@@ -99,11 +99,12 @@ function ErpVisual() {
 }
 
 function AiVisual() {
+  const cols = [50, 110, 170, 220];
   const layers = [
     [30, 60, 90],
-    [25, 50, 75, 100],
-    [40, 75, 110],
-    [60, 95],
+    [22, 52, 82, 110],
+    [22, 52, 82, 110],
+    [45, 80],
   ];
   return (
     <svg viewBox="0 0 240 120" className="h-full w-full" fill="none" aria-hidden>
@@ -114,13 +115,13 @@ function AiVisual() {
           return next.map((y2, ni2) => (
             <motion.line
               key={`${li}-${ni}-${ni2}`}
-              x1={40 + li * 55}
+              x1={cols[li]}
               y1={y}
-              x2={40 + (li + 1) * 55}
+              x2={cols[li + 1]}
               y2={y2}
               stroke="var(--accent)"
-              strokeOpacity="0.25"
-              strokeWidth="0.5"
+              strokeOpacity="0.55"
+              strokeWidth="1"
               initial={{ pathLength: 0, opacity: 0 }}
               whileInView={{ pathLength: 1, opacity: 1 }}
               viewport={{ once: true, amount: 0.4 }}
@@ -130,21 +131,24 @@ function AiVisual() {
         }),
       )}
       {layers.map((layer, li) =>
-        layer.map((y, ni) => (
-          <motion.circle
-            key={`n-${li}-${ni}`}
-            cx={40 + li * 55}
-            cy={y}
-            r={ni === Math.floor(layer.length / 2) && li === 1 ? 4 : 3}
-            fill={ni === Math.floor(layer.length / 2) && li === 1 ? "var(--accent)" : "var(--color-canvas)"}
-            stroke="var(--accent)"
-            strokeWidth="1.25"
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.4, delay: 0.2 + li * 0.08 + ni * 0.04 }}
-          />
-        )),
+        layer.map((y, ni) => {
+          const isHero = li === 1 && ni === 1;
+          return (
+            <motion.circle
+              key={`n-${li}-${ni}`}
+              cx={cols[li]}
+              cy={y}
+              r={isHero ? 5.5 : 4}
+              fill={isHero ? "var(--accent)" : "var(--color-canvas)"}
+              stroke="var(--accent)"
+              strokeWidth="1.75"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.2 + li * 0.08 + ni * 0.04 }}
+            />
+          );
+        }),
       )}
     </svg>
   );
