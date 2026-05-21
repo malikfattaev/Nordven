@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Nordven - Web, ERP e Infraestructura para equipos modernos",
-    "description": "Nordven crea software duradero y bien pensado para equipos ambiciosos. Producto web, plataformas internas e infraestructura en la nube, entregado de extremo a extremo.",
+    "title": "Nordven - Sitios web, ERP y CRM, e IA para equipos modernos",
+    "description": "Nordven diseña y construye software duradero y bien pensado para equipos ambiciosos. Sitios web, plataformas de ERP y CRM, y soluciones de IA, entregado de extremo a extremo.",
     "ogAlt": "Nordven"
   },
   "nav": {
@@ -20,7 +20,6 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Estudio de ingeniería de producto y plataforma",
       "titleA": "Software que se siente",
       "titleEm": "considerado",
       "titleB": "desde el primer pixel hasta el último despliegue.",

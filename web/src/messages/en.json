@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Nordven - Web, ERP, and Infrastructure for modern teams",
-    "description": "Nordven builds calm, durable software for ambitious teams. Web product, internal platforms, and cloud infrastructure - shipped end to end.",
+    "title": "Nordven - Websites, ERP & CRM, and AI for modern teams",
+    "description": "Nordven designs and builds calm, durable software for ambitious teams. Websites, ERP and CRM platforms, and AI solutions - shipped end to end.",
     "ogAlt": "Nordven"
   },
   "nav": {
@@ -20,7 +20,6 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Studio for product and platform engineering",
       "titleA": "Software that feels",
       "titleEm": "considered",
       "titleB": "from the first pixel to the last deploy.",
