@@ -2,27 +2,8 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Link } from "@/i18n/navigation";
 import { services } from "@/content/services";
 import { cn } from "@/lib/cn";
-
-const ArrowIcon = (
-  <svg
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden
-    className="transition-transform duration-300 ease-[var(--ease-soft)] group-hover:translate-x-0.5"
-  >
-    <path d="M7 17 L17 7" />
-    <path d="M9 7 L17 7 L17 15" />
-  </svg>
-);
 
 export function ServicesShowcase() {
   const t = useTranslations("home.services");
@@ -43,20 +24,15 @@ export function ServicesShowcase() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-3">
+        <ul className="mt-16 grid gap-5 md:grid-cols-3">
           {services.map((service) => (
-            <Link
+            <li
               key={service.slug}
-              href={`/services/${service.slug}`}
-              className={cn(
-                "group relative flex flex-col justify-between rounded-[var(--radius-card)] border border-[color:var(--color-line)] bg-[color:var(--color-canvas-elevated)] p-8 transition-all duration-500 ease-[var(--ease-soft)]",
-                "hover:-translate-y-1 hover:border-[color:var(--color-line-strong)] hover:shadow-[var(--shadow-lift)]",
-                "min-h-[26rem]",
-              )}
+              className="relative flex min-h-[20rem] flex-col justify-between rounded-[var(--radius-card)] border border-[color:var(--color-line)] bg-[color:var(--color-canvas-elevated)] p-8"
             >
               <div
                 aria-hidden
-                className="absolute inset-x-0 top-0 h-1 rounded-t-[var(--radius-card)] opacity-0 transition-opacity duration-500 ease-[var(--ease-soft)] group-hover:opacity-100"
+                className="absolute inset-x-8 top-0 h-px"
                 style={{ background: service.theme.accent }}
               />
 
@@ -74,7 +50,7 @@ export function ServicesShowcase() {
                 </span>
               </div>
 
-              <div className="mt-12">
+              <div className="mt-10">
                 <h3 className="font-display text-3xl text-balance sm:text-4xl">
                   {tServices(`${service.slug}.tagline`)}
                 </h3>
@@ -82,14 +58,9 @@ export function ServicesShowcase() {
                   {tServices(`${service.slug}.short`)}
                 </p>
               </div>
-
-              <div className="mt-10 flex items-center gap-2 text-sm font-medium text-[color:var(--color-ink)]">
-                {t("exploreCta")}
-                {ArrowIcon}
-              </div>
-            </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </Section>
   );

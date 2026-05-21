@@ -1,10 +1,9 @@
-export const serviceSlugs = ["web", "erp", "infra"] as const;
+export const serviceSlugs = ["websites", "erp", "ai"] as const;
 export type ServiceSlug = (typeof serviceSlugs)[number];
 
 export type ServiceTheme = {
   accent: string;
   accentSoft: string;
-  ring: string;
   badge: string;
 };
 
@@ -17,15 +16,14 @@ export type ServiceDefinition = {
 
 export const services: ReadonlyArray<ServiceDefinition> = [
   {
-    slug: "web",
+    slug: "websites",
     number: "01",
     theme: {
       accent: "var(--color-mist-300)",
       accentSoft: "var(--color-mist-100)",
-      ring: "ring-[color:var(--color-mist-300)]",
       badge: "bg-[color:var(--color-mist-100)] text-[color:var(--color-mist-500)]",
     },
-    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Vercel", "Sanity"],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Sanity", "Vercel"],
   },
   {
     slug: "erp",
@@ -33,24 +31,18 @@ export const services: ReadonlyArray<ServiceDefinition> = [
     theme: {
       accent: "var(--color-mint-300)",
       accentSoft: "var(--color-mint-100)",
-      ring: "ring-[color:var(--color-mint-300)]",
       badge: "bg-[color:var(--color-mint-100)] text-[color:var(--color-mint-500)]",
     },
-    stack: ["Postgres", "NestJS", "Prisma", "Temporal", "Stripe", "Auth0"],
+    stack: ["Postgres", "NestJS", "Drizzle", "Temporal", "Stripe", "HubSpot"],
   },
   {
-    slug: "infra",
+    slug: "ai",
     number: "03",
     theme: {
       accent: "var(--color-lilac-300)",
       accentSoft: "var(--color-lilac-100)",
-      ring: "ring-[color:var(--color-lilac-300)]",
       badge: "bg-[color:var(--color-lilac-100)] text-[color:var(--color-lilac-500)]",
     },
-    stack: ["AWS", "Terraform", "Kubernetes", "Cloudflare", "Grafana", "GitHub Actions"],
+    stack: ["OpenAI", "Anthropic", "LangChain", "pgvector", "Vercel AI", "Modal"],
   },
 ] as const;
-
-export function getService(slug: string): ServiceDefinition | undefined {
-  return services.find((s) => s.slug === slug);
-}

@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Aurora } from "@/components/ui/Aurora";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { site } from "@/content/site";
 
@@ -26,9 +25,8 @@ export default async function ContactPage({ params }: Props) {
   const t = await getTranslations("contact");
 
   return (
-    <Section className="relative overflow-hidden pb-24 pt-28 sm:pt-32">
-      <Aurora />
-      <Container className="relative">
+    <Section className="pb-24 pt-20 sm:pt-24">
+      <Container>
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
             <Eyebrow>{t("eyebrow")}</Eyebrow>

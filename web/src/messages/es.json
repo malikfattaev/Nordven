@@ -24,15 +24,14 @@
       "titleA": "Software que se siente",
       "titleEm": "considerado",
       "titleB": "desde el primer pixel hasta el último despliegue.",
-      "subtitle": "Diseñamos, construimos y operamos productos web, plataformas ERP internas y la infraestructura en la nube que los sostiene, como un solo equipo en un solo plan.",
+      "subtitle": "Diseñamos y construimos sitios web, plataformas internas de ERP y CRM, y la IA que vive dentro de ellas, como un solo equipo en un solo plan.",
       "primaryCta": "Iniciar proyecto",
       "secondaryCta": "Ver nuestro trabajo"
     },
     "services": {
       "eyebrow": "Lo que hacemos",
       "title": "Tres prácticas. Una sola línea.",
-      "subtitle": "Cada proyecto empieza con la misma pregunta: ¿cómo se vería una versión calma y bien hecha de esto?",
-      "exploreCta": "Ver práctica"
+      "subtitle": "Cada proyecto empieza con la misma pregunta: ¿cómo se vería una versión calma y bien hecha de esto?"
     },
     "process": {
       "eyebrow": "Cómo trabajamos",
@@ -58,12 +57,9 @@
       ]
     },
     "metrics": {
-      "eyebrow": "Resultados, no entregables",
       "items": [
-        { "label": "Tiempo promedio al primer despliegue en producción", "value": "12 días" },
-        { "label": "Proyectos que continúan más de 12 meses", "value": "78%" },
-        { "label": "Prácticas bajo un mismo techo", "value": "3" },
-        { "label": "Zonas horarias que cubrimos a diario", "value": "5" }
+        { "label": "Tiempo promedio al primer despliegue en producción", "value": "7 días" },
+        { "label": "Proyectos entregados", "value": "9" }
       ]
     },
     "cta": {
@@ -74,88 +70,20 @@
     }
   },
   "services": {
-    "common": {
-      "capabilities": "Capacidades",
-      "stack": "Stack típico",
-      "engagement": "Compromiso",
-      "back": "Todos los servicios",
-      "next": "Siguiente práctica",
-      "talk": "Hablemos sobre esto"
-    },
-    "web": {
-      "name": "Web",
+    "websites": {
+      "name": "Sitios web",
       "short": "Experiencias de producto y marketing que cargan rápido y envejecen bien.",
-      "tagline": "Interfaces con criterio.",
-      "intro": "Sitios de marketing, paneles SaaS y portales para clientes, construidos con el mismo rigor de ingeniería que pondrías detrás de un servicio backend.",
-      "capabilities": [
-        {
-          "title": "Sitios de marca y marketing",
-          "body": "Sitios editables y veloces que el equipo de marketing usa con gusto."
-        },
-        {
-          "title": "Interfaces SaaS",
-          "body": "Paneles, configuración, facturación, administración - las superficies poco glamorosas, hechas con calma."
-        },
-        {
-          "title": "Sistemas de diseño",
-          "body": "Un lenguaje visual compartido entre diseño e ingeniería, codificado en tokens y componentes."
-        },
-        {
-          "title": "Rendimiento y accesibilidad",
-          "body": "Core Web Vitals en verde y WCAG 2.2 AA como punto de partida, no como nota al pie."
-        }
-      ],
-      "engagement": "La mayoría de los proyectos web duran de seis a doce semanas hasta el primer lanzamiento, y continúan como acuerdo de soporte."
+      "tagline": "Interfaces con criterio."
     },
     "erp": {
-      "name": "ERP",
-      "short": "Plataformas internas que reemplazan el desorden de hojas de cálculo.",
-      "tagline": "El sistema sobre el que tu empresa realmente opera.",
-      "intro": "ERP, CRM y plataformas operativas a medida, diseñados según cómo tu equipo trabaja de verdad y no como un vendedor SaaS imagina que deberías trabajar.",
-      "capabilities": [
-        {
-          "title": "Flujos y aprobaciones",
-          "body": "Procesos de varios pasos, control por roles y rastros de auditoría que sobreviven una auditoría."
-        },
-        {
-          "title": "Integraciones",
-          "body": "Finanzas, pagos, identidad, comunicaciones - conectadas por contratos tipados, no scripts frágiles."
-        },
-        {
-          "title": "Reportes y analítica",
-          "body": "Tableros operativos en tiempo real que se leen como frases, no como tablas dinámicas."
-        },
-        {
-          "title": "Migración desde sistemas heredados",
-          "body": "Hojas de cálculo, Airtable, herramientas internas envejecidas - migradas con datos y conocimiento intacto."
-        }
-      ],
-      "engagement": "Los proyectos ERP comienzan con un sprint de encuadre de cuatro semanas para mapear el dominio y luego pasan a entregas incrementales."
+      "name": "ERP y CRM",
+      "short": "Plataformas internas que reemplazan el caos de hojas de cálculo y SaaS sueltos.",
+      "tagline": "El sistema sobre el que tu empresa realmente opera."
     },
-    "infra": {
-      "name": "Infra",
-      "short": "Fundaciones de nube silenciosas y observables.",
-      "tagline": "La plataforma bajo el producto.",
-      "intro": "Arquitectura cloud, CI/CD y observabilidad para que tu equipo despliegue a diario sin despertar a nadie de noche.",
-      "capabilities": [
-        {
-          "title": "Arquitectura cloud",
-          "body": "Entornos AWS, GCP o híbridos del tamaño adecuado - codificados en Terraform y revisados como código de producto."
-        },
-        {
-          "title": "CI/CD y experiencia de desarrollo",
-          "body": "Pipelines que terminan en minutos, previsualizaciones en cada pull request y rollbacks que simplemente funcionan."
-        },
-        {
-          "title": "Observabilidad",
-          "body": "Logs, métricas y trazas conectados - la primera pregunta siempre se responde con un tablero."
-        },
-        {
-          "title": "Fiabilidad y guardia",
-          "body": "Runbooks, SLOs y una guardia compartida opcional mientras tu equipo crece hacia la propia."
-        }
-      ],
-      "engagement": "Los proyectos de infra suelen empezar con una auditoría de dos semanas, seguida de un plan de remediación estructurado."
+    "ai": {
+      "name": "Soluciones IA",
+      "short": "RAG, agentes y modelos a medida, entregados con el mismo estándar de fiabilidad que el resto del stack.",
+      "tagline": "IA integrada en el producto, no pegada por fuera."
     }
   },
   "about": {
@@ -169,7 +97,7 @@
       },
       {
         "title": "Una sola línea",
-        "body": "Web, ERP e Infra bajo un mismo equipo - sin dramas de integración entre proveedores."
+        "body": "Sitios web, ERP & CRM e IA bajo un mismo equipo - sin dramas de integración entre proveedores."
       },
       {
         "title": "Calma por diseño",

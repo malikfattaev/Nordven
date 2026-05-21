@@ -4,7 +4,6 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { Aurora } from "@/components/ui/Aurora";
 
 const VALUE_KEYS = ["0", "1", "2", "3"] as const;
 
@@ -29,9 +28,8 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <>
-      <Section className="relative overflow-hidden pb-20 pt-28 sm:pb-28 sm:pt-32">
-        <Aurora />
-        <Container className="relative">
+      <Section className="pb-20 pt-20 sm:pb-28 sm:pt-24">
+        <Container>
           <div className="max-w-4xl">
             <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h1 className="mt-6 font-display text-5xl text-balance sm:text-6xl md:text-7xl">

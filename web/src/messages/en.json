@@ -24,15 +24,14 @@
       "titleA": "Software that feels",
       "titleEm": "considered",
       "titleB": "from the first pixel to the last deploy.",
-      "subtitle": "We design, build, and operate web products, internal ERP platforms, and the cloud infrastructure underneath them - as one team, on one timeline.",
+      "subtitle": "We design and build websites, internal ERP and CRM platforms, and the AI that runs inside them - as one team, on one timeline.",
       "primaryCta": "Start a project",
       "secondaryCta": "See our work"
     },
     "services": {
       "eyebrow": "What we do",
       "title": "Three practices. One throughline.",
-      "subtitle": "Every engagement starts with the same question: what would a calm, well-engineered version of this look like?",
-      "exploreCta": "Explore practice"
+      "subtitle": "Every engagement starts with the same question: what would a calm, well-engineered version of this look like?"
     },
     "process": {
       "eyebrow": "How we work",
@@ -58,12 +57,9 @@
       ]
     },
     "metrics": {
-      "eyebrow": "Outcomes, not output",
       "items": [
-        { "label": "Average time to first production deploy", "value": "12 days" },
-        { "label": "Engagements running 12+ months in", "value": "78%" },
-        { "label": "Practices under one roof", "value": "3" },
-        { "label": "Time zones we cover daily", "value": "5" }
+        { "label": "Average time to first production deploy", "value": "7 days" },
+        { "label": "Projects shipped", "value": "9" }
       ]
     },
     "cta": {
@@ -74,88 +70,20 @@
     }
   },
   "services": {
-    "common": {
-      "capabilities": "Capabilities",
-      "stack": "A typical stack",
-      "engagement": "Engagement",
-      "back": "All services",
-      "next": "Next practice",
-      "talk": "Talk to us about this"
-    },
-    "web": {
-      "name": "Web",
+    "websites": {
+      "name": "Websites",
       "short": "Product and marketing experiences that load fast and age well.",
-      "tagline": "Interfaces with taste.",
-      "intro": "Marketing sites, SaaS dashboards, and customer-facing portals - built with the same engineering rigor you would put behind a backend service.",
-      "capabilities": [
-        {
-          "title": "Marketing and brand sites",
-          "body": "Editable, performant sites that the marketing team actually wants to use."
-        },
-        {
-          "title": "SaaS interfaces",
-          "body": "Dashboards, settings, billing, admin - the unglamorous surfaces, made calm."
-        },
-        {
-          "title": "Design systems",
-          "body": "A shared visual language between design and engineering, codified in tokens and components."
-        },
-        {
-          "title": "Performance and accessibility",
-          "body": "Core Web Vitals in the green, WCAG 2.2 AA as a baseline, not an afterthought."
-        }
-      ],
-      "engagement": "Most web engagements run six to twelve weeks for a first release, then continue as a retained partnership."
+      "tagline": "Interfaces with taste."
     },
     "erp": {
-      "name": "ERP",
-      "short": "Internal platforms that replace the spreadsheet sprawl.",
-      "tagline": "The system your business actually runs on.",
-      "intro": "Custom ERP, CRM, and operations platforms designed around how your team really works - not how a SaaS vendor wishes you did.",
-      "capabilities": [
-        {
-          "title": "Workflow and approvals",
-          "body": "Multi-step processes, role-based access, audit trails that survive an audit."
-        },
-        {
-          "title": "Integrations",
-          "body": "Finance, payments, identity, communications - connected through typed contracts, not brittle scripts."
-        },
-        {
-          "title": "Reporting and analytics",
-          "body": "Operational dashboards that update in real time and read like sentences, not pivot tables."
-        },
-        {
-          "title": "Migration from legacy",
-          "body": "Spreadsheets, Airtable, aging in-house tools - migrated with the data and the institutional knowledge intact."
-        }
-      ],
-      "engagement": "ERP engagements start with a four-week framing sprint to map the domain, then move into incremental delivery."
+      "name": "ERP & CRM",
+      "short": "Internal platforms that replace the spreadsheet sprawl and the SaaS chaos.",
+      "tagline": "The system your business actually runs on."
     },
-    "infra": {
-      "name": "Infra",
-      "short": "Quiet, observable cloud foundations.",
-      "tagline": "The platform under the product.",
-      "intro": "Cloud architecture, CI/CD, and observability that lets your team ship daily without paging anyone at night.",
-      "capabilities": [
-        {
-          "title": "Cloud architecture",
-          "body": "Right-sized AWS, GCP, or hybrid environments - codified in Terraform, reviewed like product code."
-        },
-        {
-          "title": "CI/CD and developer experience",
-          "body": "Pipelines that finish in minutes, previews on every pull request, rollbacks that just work."
-        },
-        {
-          "title": "Observability",
-          "body": "Logs, metrics, and traces wired together - so the first question is always answered by a dashboard."
-        },
-        {
-          "title": "Reliability and on-call",
-          "body": "Runbooks, SLOs, and an optional shared on-call rotation while your team grows into its own."
-        }
-      ],
-      "engagement": "Infra engagements typically start with a two-week audit, followed by a structured remediation plan."
+    "ai": {
+      "name": "AI Solutions",
+      "short": "RAG, agents, and bespoke models, shipped with the same reliability bar as the rest of your stack.",
+      "tagline": "AI woven into the product, not bolted on."
     }
   },
   "about": {
@@ -169,7 +97,7 @@
       },
       {
         "title": "One throughline",
-        "body": "Web, ERP, and Infra under one team - no integration drama between vendors."
+        "body": "Websites, ERP & CRM, and AI under one team - no integration drama between vendors."
       },
       {
         "title": "Calm by design",
