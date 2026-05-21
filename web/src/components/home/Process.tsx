@@ -46,7 +46,7 @@ export function Process() {
 
         <Reveal delay={0.1}>
           <div className="mt-14 grid items-stretch gap-6 md:grid-cols-[1.1fr_1fr] md:gap-10">
-            <div className="card-surface relative overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-8 sm:p-12">
+            <div className="card-surface relative overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:p-12">
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 opacity-50"
@@ -66,7 +66,7 @@ export function Process() {
                 type="button"
                 onClick={() => setIndex((i) => (i - 1 + total) % total)}
                 aria-label="Previous step"
-                className="absolute left-3 top-1/2 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-canvas)] text-[color:var(--color-ink-soft)] shadow-[var(--shadow-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
+                className="absolute left-2 top-1/2 -translate-y-1/2 grid h-9 w-9 place-items-center rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-canvas)] text-[color:var(--color-ink-soft)] shadow-[var(--shadow-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)] sm:left-3 sm:h-10 sm:w-10"
               >
                 <ChevronLeft size={16} strokeWidth={1.75} />
               </button>
@@ -74,7 +74,7 @@ export function Process() {
                 type="button"
                 onClick={() => setIndex((i) => (i + 1) % total)}
                 aria-label="Next step"
-                className="absolute right-3 top-1/2 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-canvas)] text-[color:var(--color-ink-soft)] shadow-[var(--shadow-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
+                className="absolute right-2 top-1/2 -translate-y-1/2 grid h-9 w-9 place-items-center rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-canvas)] text-[color:var(--color-ink-soft)] shadow-[var(--shadow-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)] sm:right-3 sm:h-10 sm:w-10"
               >
                 <ChevronRight size={16} strokeWidth={1.75} />
               </button>

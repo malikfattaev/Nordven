@@ -11,7 +11,17 @@ const labels: Record<Locale, string> = {
   es: "ES",
 };
 
-export function LocaleSwitcher({ className }: { className?: string }) {
+type Variant = "header" | "inline";
+
+export function LocaleSwitcher({
+  className,
+  variant = "header",
+  onSwitch,
+}: {
+  className?: string;
+  variant?: Variant;
+  onSwitch?: () => void;
+}) {
   const t = useTranslations("nav");
   const active = useLocale() as Locale;
   const router = useRouter();
@@ -38,21 +48,50 @@ export function LocaleSwitcher({ className }: { className?: string }) {
 
   const setLocale = (next: Locale) => {
     setOpen(false);
-    if (next === active) return;
+    if (next === active) {
+      onSwitch?.();
+      return;
+    }
     startTransition(() => {
       router.replace(pathname, { locale: next });
+      onSwitch?.();
     });
   };
+
+  if (variant === "inline") {
+    return (
+      <div
+        className={cn("inline-flex items-center gap-1 rounded-full border border-[color:var(--color-line)] p-1", className)}
+        aria-label={t("language")}
+      >
+        {locales.map((code) => {
+          const isActive = code === active;
+          return (
+            <button
+              key={code}
+              type="button"
+              onClick={() => setLocale(code)}
+              aria-pressed={isActive}
+              className={cn(
+                "rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-300 ease-[var(--ease-soft)]",
+                isActive
+                  ? "bg-[color:var(--color-ink)] text-[color:var(--color-canvas)]"
+                  : "text-[color:var(--color-ink-soft)] hover:text-[color:var(--color-ink)]",
+                isPending && "opacity-70",
+              )}
+            >
+              {labels[code]}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
 
   const others = locales.filter((code) => code !== active);
 
   return (
-    <div
-      ref={containerRef}
-      className={cn("relative inline-block", className)}
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-    >
+    <div ref={containerRef} className={cn("relative inline-block", className)}>
       <button
         type="button"
         aria-haspopup="listbox"

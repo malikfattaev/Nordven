@@ -46,7 +46,7 @@ export function ServicesShowcase() {
                 delay={0.05 + i * 0.08}
                 style={{ "--accent": service.theme.accent } as CSSProperties}
                 className={cn(
-                  "card-surface group relative flex min-h-[22rem] cursor-pointer flex-col rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-7",
+                  "card-surface group relative flex min-h-[19rem] cursor-pointer flex-col rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:min-h-[22rem] sm:p-7",
                   "transition-[border-color] duration-300 ease-[var(--ease-soft)]",
                   "hover:border-[color:var(--accent)]",
                 )}

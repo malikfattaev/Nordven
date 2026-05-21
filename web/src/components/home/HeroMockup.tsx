@@ -126,7 +126,7 @@ const SIDEBAR_ITEMS = [
 
 export function HeroMockup() {
   return (
-    <div className="relative mx-auto mt-16 w-full max-w-5xl select-none sm:mt-20">
+    <div className="relative mx-auto mt-12 w-full max-w-5xl select-none sm:mt-20">
       <motion.div
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
@@ -137,8 +137,8 @@ export function HeroMockup() {
         <motion.div
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-          style={{ transform: "rotateX(8deg) rotateY(-4deg)", transformStyle: "preserve-3d" }}
-          className="relative overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] bg-[color:var(--color-canvas)]/85 shadow-[var(--shadow-lift)] backdrop-blur-sm"
+          style={{ transformStyle: "preserve-3d" }}
+          className="relative overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] bg-[color:var(--color-canvas)]/85 shadow-[var(--shadow-lift)] backdrop-blur-sm sm:[transform:rotateX(8deg)_rotateY(-4deg)]"
         >
           <div className="flex items-center gap-2 border-b border-[color:var(--color-line)] px-4 py-3">
             <span className="h-2.5 w-2.5 rounded-full bg-[color:var(--color-peach-200)]" />
@@ -151,8 +151,8 @@ export function HeroMockup() {
             </div>
           </div>
 
-          <div className="grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr]">
-            <aside className="border-r border-[color:var(--color-line)] p-3 sm:p-4">
+          <div className="grid grid-cols-[110px_1fr] sm:grid-cols-[180px_1fr]">
+            <aside className="border-r border-[color:var(--color-line)] p-2.5 sm:p-4">
               <ul className="space-y-1">
                 {SIDEBAR_ITEMS.map(({ icon: Icon, label, active }) => (
                   <li key={label}>
@@ -171,8 +171,8 @@ export function HeroMockup() {
               </ul>
             </aside>
 
-            <div className="grid gap-3 p-4 sm:gap-4 sm:p-5">
-              <div className="grid grid-cols-3 gap-3 sm:gap-4">
+            <div className="grid gap-3 p-3 sm:gap-4 sm:p-5">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 <StatCard label="MRR" value="$48.2k" delta="+12.4%" up />
                 <StatCard label="Active users" value="2 184" delta="+3.1%" up />
                 <StatCard label="Churn" value="0.8%" delta="-0.3%" />
