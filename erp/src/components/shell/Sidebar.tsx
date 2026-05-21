@@ -5,16 +5,16 @@ import { usePathname } from "next/navigation";
 import { LayoutDashboard, Wallet, Users, FolderKanban, type LucideIcon } from "lucide-react";
 
 type NavItem = { href: string; label: string; icon: LucideIcon };
-type NavGroup = { label: string | null; items: NavItem[] };
+type NavGroup = { label: string; items: NavItem[] };
 
 const GROUPS: NavGroup[] = [
   {
-    label: null,
+    label: "Main",
     items: [{ href: "/", label: "Dashboard", icon: LayoutDashboard }],
   },
   {
     label: "Finance",
-    items: [{ href: "/finance", label: "Transactions", icon: Wallet }],
+    items: [{ href: "/finance", label: "Invoices", icon: Wallet }],
   },
   {
     label: "Business",
@@ -39,11 +39,10 @@ export function Sidebar() {
       <nav aria-label="Primary" className="flex flex-1 flex-col gap-6">
         {GROUPS.map((group, gi) => (
           <div key={gi} className="flex flex-col gap-1">
-            {group.label && (
-              <span className="px-3 pb-1 font-mono text-[10px] uppercase tracking-[0.22em] text-[color:var(--color-ink-muted)]">
-                {group.label}
-              </span>
-            )}
+            <span className="inline-flex items-center gap-2 px-3 pb-2 text-[10px] font-medium uppercase tracking-[0.22em] text-[color:var(--color-ink-muted)]">
+              <span aria-hidden className="h-px w-5 bg-[color:var(--color-line-strong)]" />
+              {group.label}
+            </span>
             {group.items.map(({ href, label, icon: Icon }) => {
               const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
               return (
