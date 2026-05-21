@@ -3,6 +3,8 @@ import { routing } from "@/i18n/routing";
 import { publicEnv } from "@/lib/env";
 import { htmlLangMap, pathForLocale } from "@/lib/seo";
 
+export const dynamic = "force-dynamic";
+
 const ROUTES = ["/", "/about", "/contact"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

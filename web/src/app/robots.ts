@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { publicEnv } from "@/lib/env";
 
+export const dynamic = "force-dynamic";
+
 export default function robots(): MetadataRoute.Robots {
   const base = publicEnv.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
   return {
