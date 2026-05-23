@@ -36,6 +36,7 @@ export function Logo({ className }: Props) {
             <stop offset="1" stopColor="#B1DCBE" />
           </linearGradient>
         </defs>
+        <circle cx="16" cy="16" r="11" fill="none" stroke="#161513" strokeOpacity="0.28" strokeWidth="5.4" />
         <circle cx="16" cy="16" r="11" fill="none" stroke="url(#nordven-logo-ring)" strokeWidth="4.2" />
       </svg>
       <span>{site.name}</span>

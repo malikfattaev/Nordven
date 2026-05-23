@@ -7,5 +7,6 @@
       <stop offset="1" stop-color="#B1DCBE"/>
     </linearGradient>
   </defs>
+  <circle cx="16" cy="16" r="11" fill="none" stroke="#161513" stroke-opacity="0.28" stroke-width="5.4"/>
   <circle cx="16" cy="16" r="11" fill="none" stroke="url(#nordven-ring)" stroke-width="4.2"/>
 </svg>
