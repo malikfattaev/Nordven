@@ -46,11 +46,12 @@ export function ServicesShowcase() {
                 as="li"
                 delay={0.05 + i * 0.08}
                 style={{ "--accent": service.theme.accent } as CSSProperties}
+                className="h-full"
               >
                 <Link
                   href={`/services/${service.slug}`}
                   className={cn(
-                    "card-surface group relative flex min-h-[19rem] flex-col rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:min-h-[22rem] sm:p-7",
+                    "card-surface group relative flex h-full min-h-[19rem] flex-col rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:min-h-[22rem] sm:p-7",
                     "transition-[border-color] duration-300 ease-[var(--ease-soft)]",
                     "hover:border-[color:var(--accent)] focus-visible:outline-none focus-visible:border-[color:var(--accent)]",
                   )}

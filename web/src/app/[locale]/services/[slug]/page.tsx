@@ -1,25 +1,18 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import { ArrowLeft, ArrowUpRight, BrainCircuit, Check, Database, Globe, type LucideIcon } from "lucide-react";
+import { Check } from "lucide-react";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { Link } from "@/i18n/navigation";
 import { ServiceVisual } from "@/components/home/ServiceVisual";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { locales, type Locale } from "@/i18n/routing";
 import { pathForLocale } from "@/lib/seo";
 import { services, serviceSlugs, type ServiceSlug } from "@/content/services";
 import { cn } from "@/lib/cn";
-
-const ICONS: Record<ServiceSlug, LucideIcon> = {
-  websites: Globe,
-  erp: Database,
-  ai: BrainCircuit,
-};
 
 const FEATURE_KEYS = ["0", "1", "2", "3"] as const;
 const DELIVERABLE_KEYS = ["0", "1", "2", "3", "4", "5"] as const;
@@ -78,51 +71,30 @@ export default async function ServiceDetailPage({ params }: Props) {
   const tDetail = await getTranslations("services.detail");
 
   const service = services.find((s) => s.slug === slug)!;
-  const Icon = ICONS[slug];
   const accentStyle = { "--accent": service.theme.accent } as CSSProperties;
 
   return (
     <>
       <Section className="pb-12 pt-4 sm:pb-16 sm:pt-6">
         <Container>
-          <Reveal>
-            <Link
-              href="/#services"
-              className="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-[color:var(--color-ink-muted)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
-            >
-              <ArrowLeft
-                size={14}
-                strokeWidth={1.75}
-                className="transition-transform duration-300 ease-[var(--ease-soft)] group-hover:-translate-x-0.5"
-              />
-              {tDetail("backToServices")}
-            </Link>
-          </Reveal>
-
-          <div className="mt-10 grid items-center gap-10 md:mt-12 md:grid-cols-12 md:gap-12">
+          <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
             <div className="md:col-span-6">
               <Reveal>
-                <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-[color:var(--color-ink-soft)]">
-                  <Icon size={15} strokeWidth={1.6} aria-hidden />
-                  {t(`${slug}.name`)}
-                </span>
-              </Reveal>
-              <Reveal delay={0.05}>
-                <h1 className="mt-5 font-display text-5xl text-balance sm:text-6xl md:text-[4rem] md:leading-[1.05]">
+                <h1 className="font-display text-[2.5rem] leading-[1.05] text-balance sm:text-6xl md:text-[4rem]">
                   {t(`${slug}.detail.title`)}
                 </h1>
               </Reveal>
-              <Reveal delay={0.1}>
-                <p className="mt-6 max-w-xl text-pretty text-lg text-[color:var(--color-ink-soft)]">
+              <Reveal delay={0.05}>
+                <p className="mt-6 max-w-xl text-pretty text-base text-[color:var(--color-ink-soft)] sm:mt-8 sm:text-lg">
                   {t(`${slug}.detail.lead`)}
                 </p>
               </Reveal>
             </div>
 
-            <Reveal delay={0.15} className="md:col-span-6">
+            <Reveal delay={0.1} className="md:col-span-6">
               <div
                 style={accentStyle}
-                className="card-surface relative overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:p-10"
+                className="card-surface relative overflow-hidden rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-5 sm:p-10"
               >
                 <div
                   aria-hidden
@@ -153,7 +125,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             </h2>
           </Reveal>
 
-          <ul className="mt-12 grid gap-5 md:grid-cols-2">
+          <ul className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2">
             {FEATURE_KEYS.map((key, i) => (
               <Reveal
                 key={key}
@@ -161,19 +133,19 @@ export default async function ServiceDetailPage({ params }: Props) {
                 delay={0.05 + i * 0.06}
                 style={accentStyle}
                 className={cn(
-                  "card-surface rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:p-8",
+                  "card-surface h-full rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:p-8",
                   "transition-[border-color] duration-300 ease-[var(--ease-soft)] hover:border-[color:var(--accent)]",
                 )}
               >
-                <div className="flex items-baseline gap-4">
+                <div className="flex items-baseline gap-3 sm:gap-4">
                   <span className="font-mono text-xs tracking-[0.22em] text-[color:var(--color-ink-muted)]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-display text-2xl text-[color:var(--color-ink)] sm:text-3xl">
+                  <h3 className="font-display text-xl text-[color:var(--color-ink)] sm:text-2xl md:text-3xl">
                     {t(`${slug}.detail.features.${key}.title`)}
                   </h3>
                 </div>
-                <p className="mt-4 text-pretty text-[color:var(--color-ink-soft)]">
+                <p className="mt-3 text-sm text-pretty text-[color:var(--color-ink-soft)] sm:mt-4 sm:text-base">
                   {t(`${slug}.detail.features.${key}.body`)}
                 </p>
               </Reveal>
@@ -184,7 +156,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       <Section tight>
         <Container>
-          <div className="grid gap-10 md:grid-cols-12 md:gap-16">
+          <div className="grid gap-8 md:grid-cols-12 md:gap-16">
             <Reveal className="md:col-span-5">
               <Eyebrow>{tDetail("deliverablesEyebrow")}</Eyebrow>
               <h2 className="mt-4 font-display text-3xl text-balance sm:text-4xl">
@@ -222,29 +194,17 @@ export default async function ServiceDetailPage({ params }: Props) {
         </Container>
       </Section>
 
-      <Section id="contact" className="pb-24">
+      <Section id="contact" className="pb-20 sm:pb-24">
         <Container>
-          <div className="grid gap-12 md:grid-cols-12 md:gap-16">
+          <div className="grid gap-10 md:grid-cols-12 md:gap-16">
             <Reveal className="md:col-span-5">
               <Eyebrow>{tDetail("cta.eyebrow")}</Eyebrow>
-              <h2 className="mt-4 font-display text-4xl text-balance sm:text-5xl">
+              <h2 className="mt-4 font-display text-3xl text-balance sm:text-4xl md:text-5xl">
                 {tDetail("cta.title")}
               </h2>
-              <p className="mt-6 max-w-md text-pretty text-[color:var(--color-ink-soft)]">
+              <p className="mt-5 max-w-md text-pretty text-[color:var(--color-ink-soft)] sm:mt-6">
                 {tDetail("cta.subtitle")}
               </p>
-
-              <Link
-                href="/#services"
-                className="group mt-10 inline-flex items-center gap-2 text-sm text-[color:var(--color-ink-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
-              >
-                <span>{tDetail("backToServices")}</span>
-                <ArrowUpRight
-                  size={14}
-                  strokeWidth={1.75}
-                  className="transition-transform duration-300 ease-[var(--ease-soft)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </Link>
             </Reveal>
 
             <Reveal delay={0.1} className="md:col-span-7">
