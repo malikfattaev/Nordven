@@ -48,11 +48,17 @@ export async function deliverLead(lead: Lead): Promise<LeadDeliveryResult> {
       }),
     });
     if (!response.ok) {
+      const bodyPreview = await response.text().then((t) => t.slice(0, 500)).catch(() => "<unreadable>");
+      console.error("[lead:webhook_error]", {
+        status: response.status,
+        body: bodyPreview,
+      });
       return { ok: false, forwarded: false, reason: `webhook_status_${response.status}` };
     }
     return { ok: true, forwarded: true };
   } catch (error) {
     const reason = error instanceof Error ? error.message : "unknown";
+    console.error("[lead:webhook_exception]", { reason, error });
     return { ok: false, forwarded: false, reason };
   }
 }

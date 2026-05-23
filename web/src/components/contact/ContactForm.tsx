@@ -74,13 +74,16 @@ export function ContactForm({ defaultService }: ContactFormProps = {}) {
         body: JSON.stringify({ ...parsed.data, locale }),
       });
       if (!response.ok) {
+        const body = await response.text().catch(() => "");
+        console.error("[contact-form] submit failed", { status: response.status, body });
         setStatus("error");
         setServerError(t("error"));
         return;
       }
       setStatus("success");
       event.currentTarget.reset();
-    } catch {
+    } catch (error) {
+      console.error("[contact-form] submit threw", error);
       setStatus("error");
       setServerError(t("error"));
     }
