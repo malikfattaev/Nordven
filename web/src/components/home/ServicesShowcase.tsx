@@ -6,6 +6,7 @@ import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { ServiceVisual } from "@/components/home/ServiceVisual";
+import { Link } from "@/i18n/navigation";
 import { services, type ServiceSlug } from "@/content/services";
 import { cn } from "@/lib/cn";
 
@@ -45,12 +46,15 @@ export function ServicesShowcase() {
                 as="li"
                 delay={0.05 + i * 0.08}
                 style={{ "--accent": service.theme.accent } as CSSProperties}
-                className={cn(
-                  "card-surface group relative flex min-h-[19rem] cursor-pointer flex-col rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:min-h-[22rem] sm:p-7",
-                  "transition-[border-color] duration-300 ease-[var(--ease-soft)]",
-                  "hover:border-[color:var(--accent)]",
-                )}
               >
+                <Link
+                  href={`/services/${service.slug}`}
+                  className={cn(
+                    "card-surface group relative flex min-h-[19rem] flex-col rounded-[var(--radius-card)] border border-[color:var(--color-line)] p-6 sm:min-h-[22rem] sm:p-7",
+                    "transition-[border-color] duration-300 ease-[var(--ease-soft)]",
+                    "hover:border-[color:var(--accent)] focus-visible:outline-none focus-visible:border-[color:var(--accent)]",
+                  )}
+                >
                   <div className="flex items-start justify-between">
                     <span className="inline-flex items-center gap-2 whitespace-nowrap text-[11px] font-medium uppercase tracking-[0.2em] text-[color:var(--color-ink-soft)]">
                       <Icon size={15} strokeWidth={1.6} aria-hidden className="shrink-0" />
@@ -76,6 +80,7 @@ export function ServicesShowcase() {
                       {tServices(`${service.slug}.short`)}
                     </p>
                   </div>
+                </Link>
               </Reveal>
             );
           })}

@@ -2,10 +2,22 @@
 
 import { motion } from "motion/react";
 import type { ServiceSlug } from "@/content/services";
+import { cn } from "@/lib/cn";
+
+const SVG_VIEWPORT = { once: true, amount: 0.2 } as const;
 
 function WebsitesVisual() {
   return (
-    <svg viewBox="0 0 240 120" className="h-full w-full" fill="none" aria-hidden>
+    <motion.svg
+      viewBox="0 0 240 120"
+      preserveAspectRatio="xMidYMid meet"
+      className="h-full w-full"
+      fill="none"
+      aria-hidden
+      initial="hidden"
+      whileInView="visible"
+      viewport={SVG_VIEWPORT}
+    >
       <rect
         x="6"
         y="10"
@@ -27,9 +39,7 @@ function WebsitesVisual() {
         stroke="var(--accent)"
         strokeWidth="2"
         strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        whileInView={{ pathLength: 1 }}
-        viewport={{ once: true, amount: 0.4 }}
+        variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1 } }}
         transition={{ duration: 1.2, ease: [0.32, 0.72, 0, 1] }}
       />
       <motion.circle
@@ -37,22 +47,29 @@ function WebsitesVisual() {
         cy="60"
         r="3"
         fill="var(--accent)"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.4 }}
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
         transition={{ duration: 0.3, delay: 1 }}
       />
 
       <rect x="18" y="44" width="40" height="6" rx="2" fill="var(--color-line)" />
       <rect x="18" y="56" width="64" height="4" rx="2" fill="var(--color-line)" />
-    </svg>
+    </motion.svg>
   );
 }
 
 function ErpVisual() {
   const rows = [80, 64, 72, 56];
   return (
-    <svg viewBox="0 0 240 120" className="h-full w-full" fill="none" aria-hidden>
+    <motion.svg
+      viewBox="0 0 240 120"
+      preserveAspectRatio="xMidYMid meet"
+      className="h-full w-full"
+      fill="none"
+      aria-hidden
+      initial="hidden"
+      whileInView="visible"
+      viewport={SVG_VIEWPORT}
+    >
       <rect
         x="6"
         y="10"
@@ -86,28 +103,35 @@ function ErpVisual() {
             height="6"
             rx="2"
             fill={i === 1 ? "var(--accent)" : "var(--color-line-strong)"}
-            initial={{ width: 0 }}
-            whileInView={{ width: w }}
-            viewport={{ once: true, amount: 0.4 }}
+            variants={{ hidden: { width: 0 }, visible: { width: w } }}
             transition={{ duration: 0.7, delay: 0.15 + i * 0.1, ease: [0.32, 0.72, 0, 1] }}
           />
           <rect x="160" y={40 + i * 16} width="20" height="6" rx="2" fill="var(--color-line)" />
         </g>
       ))}
-    </svg>
+    </motion.svg>
   );
 }
 
 function AiVisual() {
-  const cols = [50, 110, 170, 220];
+  const cols = [30, 90, 150, 210];
   const layers = [
     [30, 60, 90],
-    [22, 52, 82, 110],
-    [22, 52, 82, 110],
-    [45, 80],
+    [20, 48, 72, 100],
+    [20, 48, 72, 100],
+    [45, 75],
   ];
   return (
-    <svg viewBox="0 0 240 120" className="h-full w-full" fill="none" aria-hidden>
+    <motion.svg
+      viewBox="0 0 240 120"
+      preserveAspectRatio="xMidYMid meet"
+      className="h-full w-full"
+      fill="none"
+      aria-hidden
+      initial="hidden"
+      whileInView="visible"
+      viewport={SVG_VIEWPORT}
+    >
       {layers.flatMap((layer, li) =>
         layer.map((y, ni) => {
           const next = layers[li + 1];
@@ -120,11 +144,12 @@ function AiVisual() {
               x2={cols[li + 1]}
               y2={y2}
               stroke="var(--accent)"
-              strokeOpacity="0.55"
+              strokeOpacity="0.7"
               strokeWidth="1"
-              initial={{ pathLength: 0, opacity: 0 }}
-              whileInView={{ pathLength: 1, opacity: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
+              variants={{
+                hidden: { pathLength: 0, opacity: 0 },
+                visible: { pathLength: 1, opacity: 1 },
+              }}
               transition={{ duration: 0.8, delay: 0.1 + li * 0.1, ease: [0.32, 0.72, 0, 1] }}
             />
           ));
@@ -142,15 +167,13 @@ function AiVisual() {
               fill={isHero ? "var(--accent)" : "var(--color-canvas)"}
               stroke="var(--accent)"
               strokeWidth="1.75"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
+              variants={{ hidden: { scale: 0 }, visible: { scale: 1 } }}
               transition={{ duration: 0.4, delay: 0.2 + li * 0.08 + ni * 0.04 }}
             />
           );
         }),
       )}
-    </svg>
+    </motion.svg>
   );
 }
 
@@ -160,10 +183,16 @@ const VISUALS: Record<ServiceSlug, () => React.JSX.Element> = {
   ai: AiVisual,
 };
 
-export function ServiceVisual({ slug }: { slug: ServiceSlug }) {
+export function ServiceVisual({
+  slug,
+  className,
+}: {
+  slug: ServiceSlug;
+  className?: string;
+}) {
   const Visual = VISUALS[slug];
   return (
-    <div className="pointer-events-none relative h-28 w-full">
+    <div className={cn("pointer-events-none relative h-28 w-full", className)}>
       <Visual />
     </div>
   );

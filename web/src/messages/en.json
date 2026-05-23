@@ -70,20 +70,120 @@
     }
   },
   "services": {
+    "detail": {
+      "backToServices": "Back to services",
+      "featuresEyebrow": "What you get",
+      "deliverablesEyebrow": "Deliverables",
+      "cta": {
+        "eyebrow": "Start a conversation",
+        "title": "Want to know price or timeline?",
+        "subtitle": "Tell us a few sentences about the project. We will come back within one business day with a rough scope, a price band, and a timeline you can plan around."
+      }
+    },
     "websites": {
       "name": "Websites",
       "short": "Product and marketing experiences that load fast and age well.",
-      "tagline": "Interfaces with taste."
+      "tagline": "Interfaces with taste.",
+      "detail": {
+        "title": "Websites that load fast and age well.",
+        "lead": "Marketing and product sites that feel calm to use and stay easy to maintain long after the launch party ends.",
+        "features": [
+          {
+            "title": "Engineered for speed",
+            "body": "Built on Next.js with edge rendering and aggressive caching. Real Lighthouse scores in the high 90s, not screenshots from a staging server."
+          },
+          {
+            "title": "Designed in-house",
+            "body": "Typography, motion and layout decided by the same team writing the code. Nothing gets lost in the handoff between Figma and ship."
+          },
+          {
+            "title": "Bilingual by default",
+            "body": "Routing, content and SEO ready for English and Spanish from day one, with room to add more languages later."
+          },
+          {
+            "title": "Calm content model",
+            "body": "Updates in markdown or a typed CMS. We hand you something a non-developer can actually run without paging us."
+          }
+        ],
+        "deliverables": [
+          "Design system tied to your brand",
+          "Production codebase in your repository",
+          "Bilingual content model",
+          "Privacy-friendly analytics",
+          "Continuous deployment pipeline",
+          "30 days of post-launch iteration"
+        ]
+      }
     },
     "erp": {
       "name": "ERP & CRM",
       "short": "Internal platforms that replace the spreadsheet sprawl and the SaaS chaos.",
-      "tagline": "The system your business actually runs on."
+      "tagline": "The system your business actually runs on.",
+      "detail": {
+        "title": "Internal platforms your team will actually use.",
+        "lead": "We replace the spreadsheet sprawl and the SaaS chaos with one well-engineered system designed around how your operations really work.",
+        "features": [
+          {
+            "title": "Built around your operations",
+            "body": "We model your real workflows first, then design the screens. No off-the-shelf abstractions that fight your team every day."
+          },
+          {
+            "title": "Owned by you",
+            "body": "Source code in your GitHub, database in your cloud account. No per-seat fees that creep up every renewal cycle."
+          },
+          {
+            "title": "Roles done right",
+            "body": "Multi-tenant and role-based from the start. Admins, managers and operators each see exactly what they need."
+          },
+          {
+            "title": "Reports that earn trust",
+            "body": "Audit trails, exportable data and calm dashboards. The things that make finance and ops actually rely on the tool."
+          }
+        ],
+        "deliverables": [
+          "Custom data model on PostgreSQL",
+          "Role-based admin panel",
+          "Authentication and audit logs",
+          "Reporting and CSV / Excel exports",
+          "Operational dashboards",
+          "Documentation your team will keep"
+        ]
+      }
     },
     "ai": {
       "name": "AI Solutions",
       "short": "Chatbots, agents, RAG search, analytics models, or AI built into the product itself - whatever the team actually needs.",
-      "tagline": "AI that earns its place on the team."
+      "tagline": "AI that earns its place on the team.",
+      "detail": {
+        "title": "AI that earns its place on the team.",
+        "lead": "Chatbots, internal agents, RAG search, or AI woven into the product itself - built to be measurably useful, not just to demo well.",
+        "features": [
+          {
+            "title": "Grounded, not hallucinated",
+            "body": "Retrieval-augmented designs that cite their sources. We measure answer quality with an evaluation suite before anything ships."
+          },
+          {
+            "title": "Production guardrails",
+            "body": "Cost caps, rate limits, prompt logs and clean fallbacks for the days the model misbehaves. Nothing surprises you in the bill or the inbox."
+          },
+          {
+            "title": "Built into the product",
+            "body": "AI lives as a feature inside your software, not a chat widget bolted on. Users get answers in the place they were already going to ask."
+          },
+          {
+            "title": "Model-agnostic",
+            "body": "We pick the right model for each job - Claude, GPT, open weights - and keep you free to switch later without rewriting the app."
+          }
+        ],
+        "deliverables": [
+          "Use case definition with measurable goals",
+          "RAG pipeline or agent architecture",
+          "Evaluation suite (offline and online)",
+          "Cost and quality dashboards",
+          "Production deploy with monitoring",
+          "Hand-off playbook for your team"
+        ]
+      }
     },
     "other": {
       "name": "Something else"

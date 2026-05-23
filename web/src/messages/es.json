@@ -70,20 +70,120 @@
     }
   },
   "services": {
+    "detail": {
+      "backToServices": "Volver a servicios",
+      "featuresEyebrow": "Lo que incluye",
+      "deliverablesEyebrow": "Entregables",
+      "cta": {
+        "eyebrow": "Empieza la conversación",
+        "title": "¿Quieres saber precio o tiempos?",
+        "subtitle": "Cuéntanos en unas frases sobre el proyecto. Te respondemos en menos de un día hábil con un alcance estimado, una franja de precio y un calendario sobre el que puedas planificar."
+      }
+    },
     "websites": {
       "name": "Sitios web",
       "short": "Experiencias de producto y marketing que cargan rápido y envejecen bien.",
-      "tagline": "Interfaces con criterio."
+      "tagline": "Interfaces con criterio.",
+      "detail": {
+        "title": "Sitios web que cargan rápido y envejecen bien.",
+        "lead": "Sitios de marketing y producto que se sienten calmos al usar y siguen siendo fáciles de mantener mucho después del lanzamiento.",
+        "features": [
+          {
+            "title": "Ingeniería para la velocidad",
+            "body": "Hechos en Next.js con renderizado en edge y caché agresivo. Lighthouse real en los noventas altos, no capturas de un servidor de staging."
+          },
+          {
+            "title": "Diseño en casa",
+            "body": "Tipografía, animación y layout decididos por el mismo equipo que escribe el código. Nada se pierde en el traspaso entre Figma y producción."
+          },
+          {
+            "title": "Bilingüe por defecto",
+            "body": "Rutas, contenido y SEO listos para inglés y español desde el primer día, con espacio para sumar más idiomas después."
+          },
+          {
+            "title": "Modelo de contenido calmo",
+            "body": "Actualizaciones en markdown o un CMS tipado. Entregamos algo que alguien sin código pueda usar sin tener que llamarnos."
+          }
+        ],
+        "deliverables": [
+          "Sistema de diseño ligado a tu marca",
+          "Código de producción en tu repositorio",
+          "Modelo de contenido bilingüe",
+          "Analítica respetuosa con la privacidad",
+          "Pipeline de despliegue continuo",
+          "30 días de iteración después del lanzamiento"
+        ]
+      }
     },
     "erp": {
       "name": "ERP y CRM",
       "short": "Plataformas internas que reemplazan el caos de hojas de cálculo y SaaS sueltos.",
-      "tagline": "El sistema sobre el que tu empresa realmente opera."
+      "tagline": "El sistema sobre el que tu empresa realmente opera.",
+      "detail": {
+        "title": "Plataformas internas que tu equipo va a usar de verdad.",
+        "lead": "Reemplazamos el caos de hojas de cálculo y SaaS sueltos con un solo sistema bien hecho, diseñado alrededor de cómo opera tu equipo en realidad.",
+        "features": [
+          {
+            "title": "Diseñado para tus operaciones",
+            "body": "Modelamos primero tus flujos reales, después diseñamos las pantallas. Sin abstracciones genéricas que pelean con tu equipo todos los días."
+          },
+          {
+            "title": "El sistema es tuyo",
+            "body": "Código en tu GitHub, base de datos en tu nube. Sin tarifas por usuario que crecen cada renovación."
+          },
+          {
+            "title": "Roles bien hechos",
+            "body": "Multi-tenant y con roles desde el inicio. Administradores, gerentes y operadores ven exactamente lo que necesitan."
+          },
+          {
+            "title": "Reportes en los que se confía",
+            "body": "Trazabilidad, exportaciones y dashboards calmos. Lo que hace que finanzas y operaciones realmente usen la herramienta."
+          }
+        ],
+        "deliverables": [
+          "Modelo de datos a medida en PostgreSQL",
+          "Panel de administración con roles",
+          "Autenticación y logs de auditoría",
+          "Reportes y exportaciones CSV / Excel",
+          "Dashboards operativos",
+          "Documentación que tu equipo va a mantener"
+        ]
+      }
     },
     "ai": {
       "name": "Soluciones IA",
       "short": "Chatbots, agentes, búsqueda RAG, modelos analíticos o IA dentro del producto mismo, lo que el equipo realmente necesite.",
-      "tagline": "IA que se gana su lugar en el equipo."
+      "tagline": "IA que se gana su lugar en el equipo.",
+      "detail": {
+        "title": "IA que se gana su lugar en el equipo.",
+        "lead": "Chatbots, agentes internos, búsqueda RAG o IA tejida dentro del producto mismo - hechos para ser medibles y útiles, no solo para demos bonitas.",
+        "features": [
+          {
+            "title": "Con base, no alucinada",
+            "body": "Diseños con retrieval-augmented generation que citan sus fuentes. Medimos la calidad de las respuestas con una suite de evaluación antes de lanzar."
+          },
+          {
+            "title": "Listo para producción",
+            "body": "Topes de costo, límites de uso, logs de prompts y fallbacks limpios para los días en que el modelo se porta mal. Nada te sorprende en la factura ni en la bandeja."
+          },
+          {
+            "title": "Dentro del producto",
+            "body": "La IA vive como una función dentro de tu software, no como un widget pegado al lado. Los usuarios reciben respuestas en el mismo lugar donde ya iban a preguntar."
+          },
+          {
+            "title": "Independiente del modelo",
+            "body": "Elegimos el modelo correcto para cada caso - Claude, GPT, pesos abiertos - y te dejamos libre para cambiar después sin reescribir la app."
+          }
+        ],
+        "deliverables": [
+          "Definición del caso de uso con metas medibles",
+          "Pipeline RAG o arquitectura de agentes",
+          "Suite de evaluación (offline y online)",
+          "Dashboards de costo y calidad",
+          "Despliegue de producción con monitoreo",
+          "Manual de traspaso para tu equipo"
+        ]
+      }
     },
     "other": {
       "name": "Otra cosa"

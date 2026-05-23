@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { z } from "zod";
 import { Button } from "@/components/ui/Button";
-import { contactInterestSlugs } from "@/content/services";
+import { contactInterestSlugs, type ContactInterestSlug } from "@/content/services";
 import { cn } from "@/lib/cn";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -18,7 +18,11 @@ const fieldClasses = cn(
 
 const labelClasses = "text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-ink-soft)]";
 
-export function ContactForm() {
+type ContactFormProps = {
+  defaultService?: ContactInterestSlug;
+};
+
+export function ContactForm({ defaultService }: ContactFormProps = {}) {
   const t = useTranslations("contact.form");
   const tServices = useTranslations("services");
   const locale = useLocale();
@@ -123,7 +127,12 @@ export function ContactForm() {
           <label htmlFor="serviceInterest" className={labelClasses}>
             {t("service")}
           </label>
-          <select id="serviceInterest" name="serviceInterest" defaultValue="" className={fieldClasses}>
+          <select
+            id="serviceInterest"
+            name="serviceInterest"
+            defaultValue={defaultService ?? ""}
+            className={fieldClasses}
+          >
             <option value="" disabled>
               {t("servicePlaceholder")}
             </option>

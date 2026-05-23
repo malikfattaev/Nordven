@@ -2,10 +2,16 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { publicEnv } from "@/lib/env";
 import { htmlLangMap, pathForLocale } from "@/lib/seo";
+import { serviceSlugs } from "@/content/services";
 
 export const dynamic = "force-dynamic";
 
-const ROUTES = ["/", "/about", "/contact"] as const;
+const ROUTES = [
+  "/",
+  "/about",
+  "/contact",
+  ...serviceSlugs.map((slug) => `/services/${slug}` as const),
+] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = publicEnv.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
