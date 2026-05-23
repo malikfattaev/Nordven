@@ -81,7 +81,6 @@ export function ContactForm({ defaultService }: ContactFormProps = {}) {
         return;
       }
       setStatus("success");
-      event.currentTarget.reset();
     } catch (error) {
       console.error("[contact-form] submit threw", error);
       setStatus("error");
