@@ -32,8 +32,20 @@ export async function deliverLead(lead: Lead): Promise<LeadDeliveryResult> {
   try {
     const response = await fetch(serverEnv.CONTACT_WEBHOOK_URL, {
       method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ source: "nordven-web", lead }),
+      headers: {
+        "content-type": "application/json",
+        accept: "application/json",
+      },
+      body: JSON.stringify({
+        source: "nordven-web",
+        name: lead.name,
+        email: lead.email,
+        _replyto: lead.email,
+        company: lead.company,
+        serviceInterest: lead.serviceInterest,
+        message: lead.message,
+        locale: lead.locale,
+      }),
     });
     if (!response.ok) {
       return { ok: false, forwarded: false, reason: `webhook_status_${response.status}` };
