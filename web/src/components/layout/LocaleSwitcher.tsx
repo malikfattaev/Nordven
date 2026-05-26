@@ -9,6 +9,8 @@ import { cn } from "@/lib/cn";
 const labels: Record<Locale, string> = {
   en: "EN",
   es: "ES",
+  ru: "RU",
+  uz: "UZ",
 };
 
 type Variant = "header" | "inline";

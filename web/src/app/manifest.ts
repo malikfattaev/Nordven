@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Nordven | Software Lab",
     short_name: "Nordven",
     description:
-      "Software lab building websites, ERP and CRM platforms, and AI solutions in English and Spanish.",
+      "Software lab building websites, ERP and CRM platforms, and AI solutions for ambitious teams.",
     start_url: "/",
     display: "standalone",
     background_color: "#fbf8f3",

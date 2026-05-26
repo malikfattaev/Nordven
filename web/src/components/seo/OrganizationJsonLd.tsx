@@ -1,7 +1,8 @@
 import { site } from "@/content/site";
 import { serviceSlugs } from "@/content/services";
 import { getTranslations } from "next-intl/server";
-import type { Locale } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
+import { htmlLangMap, languageNameMap } from "@/lib/seo";
 
 type Props = {
   locale: Locale;
@@ -37,7 +38,7 @@ export async function OrganizationJsonLd({ locale }: Props) {
           "@type": "ContactPoint",
           contactType: "sales",
           email: site.email,
-          availableLanguage: ["English", "Spanish"],
+          availableLanguage: routing.locales.map((l) => languageNameMap[l]),
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -59,7 +60,7 @@ export async function OrganizationJsonLd({ locale }: Props) {
         name: site.name,
         description: tMeta("description"),
         publisher: { "@id": `${site.url}#organization` },
-        inLanguage: ["en-US", "es-ES"],
+        inLanguage: routing.locales.map((l) => htmlLangMap[l]),
       },
       {
         "@type": "ProfessionalService",

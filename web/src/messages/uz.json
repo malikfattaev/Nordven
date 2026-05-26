@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "title": "Nordven | Software Lab",
+    "titleTemplate": "Nordven | %s",
+    "description": "Nordven - bu intiluvchan jamoalar uchun veb-saytlar, ERP va CRM platformalari hamda AI yechimlarini yaratadigan dasturiy laboratoriya. Senior darajadagi muhandislik, xotirjam va uzoq xizmat qiladigan dasturiy taʼminot, boshidan oxirigacha topshiriladi.",
+    "keywords": "dasturiy laboratoriya, dasturiy studiya, veb-dizayn, veb-ishlab chiqish, Next.js, ERP ishlab chiqish, buyurtma ERP, CRM tizimi, maxsus CRM, AI yechimlari, AI chatbot, AI agent, RAG, LLM, dasturiy taʼminot ishlab chiqish",
+    "ogAlt": "Nordven | Software Lab",
+    "about": {
+      "title": "Nordven haqida",
+      "description": "Veb-saytlar, ERP, CRM va AI mahsulotlarini yaratadigan senior darajadagi studiya. Asoschilar - Malik Fattaev (COO) va Shohrukh Normaxmatov (CFO). Kichik jamoa, sukut boʻyicha senior."
+    },
+    "contact": {
+      "title": "Nordven bilan bogʻlanish",
+      "description": "Keyingi veb-saytingiz, ERP, CRM yoki AI loyihangiz haqida suhbatni boshlang. Bir ish kuni ichida javob beramiz."
+    }
+  },
+  "nav": {
+    "services": "Xizmatlar",
+    "process": "Jarayon",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "menu": "Menyu",
+    "close": "Yopish",
+    "startProject": "Loyihani boshlash",
+    "language": "Til",
+    "skipToContent": "Kontentga oʻtish"
+  },
+  "home": {
+    "hero": {
+      "titleA": "Birinchi pikseldan oxirgi deploygacha",
+      "titleEm": "puxta",
+      "titleB": "ishlangan mahsulotlar.",
+      "subtitle": "Biz veb-saytlar, ichki ERP va CRM platformalari hamda ularning ichida ishlaydigan AIni yaratamiz - yagona jamoa boʻlib, yagona reja asosida.",
+      "primaryCta": "Loyihani boshlash",
+      "secondaryCta": "Ishlarimizni koʻrish"
+    },
+    "services": {
+      "eyebrow": "Biz nima qilamiz",
+      "title": "Uchta yoʻnalish. Bitta mantiq.",
+      "subtitle": "Har bir loyiha bitta savol bilan boshlanadi: buning xotirjam va puxta ishlangan koʻrinishi qanday boʻlardi?"
+    },
+    "process": {
+      "eyebrow": "Qanday ishlaymiz",
+      "title": "Qisqa tsikl, relizgacha takrorlanadi.",
+      "subtitle": "Tadqiqot teatri va 80 betlik taqdimotlarsiz. Kichik boʻlakni olamiz, uni chiqaramiz va keyingisini oʻrgangan narsalarimiz asosida quramiz.",
+      "steps": [
+        {
+          "title": "Ramka",
+          "body": "Maqsadlar, cheklovlar va eng kichik ahamiyatli birinchi relizni kelishish uchun bir hafta."
+        },
+        {
+          "title": "Dizayn",
+          "body": "Interfeys, maʼlumotlar modeli va infratuzilma birga loyihalanadi, hech qachon alohida emas."
+        },
+        {
+          "title": "Ishlab chiqish",
+          "body": "Haqiqiy muhitda haftalik demolar. Status hisobotlari emas, pull requestlar."
+        },
+        {
+          "title": "Qoʻllab-quvvatlash",
+          "body": "Ishga tushirilgandan keyin ham siz bilan qolamiz: monitoring, takrorlash va kerak boʻlsa navbatchilik."
+        }
+      ]
+    },
+    "metrics": {
+      "items": [
+        { "label": "Ishlab chiqarishga birinchi relizgacha oʻrtacha vaqt", "value": "14 kun" },
+        { "label": "Topshirilgan loyihalar", "value": "9" }
+      ]
+    }
+  },
+  "services": {
+    "detail": {
+      "backToServices": "Xizmatlarga qaytish",
+      "featuresEyebrow": "Siz nima olasiz",
+      "deliverablesEyebrow": "Natijalar",
+      "cta": {
+        "eyebrow": "Suhbatni boshlang",
+        "title": "Narx yoki muddatni bilmoqchimisiz?",
+        "subtitle": "Loyiha haqida bir necha jumlada yozing. Bir ish kuni ichida taxminiy hajm, narx oraligʻi va rejalashtirsa boʻladigan muddat bilan qaytamiz."
+      }
+    },
+    "websites": {
+      "name": "Veb-saytlar",
+      "short": "Tez yuklanadigan va yaxshi eskiriydigan mahsulot va marketing saytlari.",
+      "tagline": "Didli interfeyslar.",
+      "detail": {
+        "title": "Tez yuklanadigan va yaxshi eskiriydigan veb-saytlar.",
+        "lead": "Foydalanish xotirjam boʻladigan va ishga tushirilgandan keyin ham uzoq vaqt oson saqlanadigan marketing va mahsulot saytlari.",
+        "features": [
+          {
+            "title": "Tezlik uchun ishlangan",
+            "body": "Next.js'da edge rendering va agressiv keshlash bilan qurilgan. Staging serverdan skrinshotlar emas, haqiqiy Lighthouse 90+ baholar."
+          },
+          {
+            "title": "Jamoa ichida dizayn",
+            "body": "Tipografiya, animatsiya va joylashuv kodni yozadigan jamoa tomonidan hal qilinadi. Figma'dan ishlab chiqarishga oʻtishda hech narsa yoʻqolmaydi."
+          },
+          {
+            "title": "Sukut boʻyicha koʻp tilli",
+            "body": "Marshrutlash, kontent va SEO birinchi kundan bir nechta tilga tayyor, yangilarini qoʻshish uchun joy bilan."
+          },
+          {
+            "title": "Xotirjam kontent modeli",
+            "body": "Yangilanishlar markdown yoki tiplangan CMSda. Bizni bezovta qilmasdan dasturchi boʻlmagan odam ham boshqara oladigan narsani topshiramiz."
+          }
+        ],
+        "deliverables": [
+          "Brendingizga bogʻlangan dizayn tizimi",
+          "Repozitoriyangizdagi ishlab chiqarish kodi",
+          "Koʻp tilli kontent modeli",
+          "Maxfiylikka doʻst analitika",
+          "Uzluksiz deploy quvuri",
+          "Ishga tushirilgandan keyin 30 kunlik takrorlash"
+        ]
+      }
+    },
+    "erp": {
+      "name": "ERP va CRM",
+      "short": "Jadval tarqoqligi va SaaS tartibsizligini almashtiradigan ichki platformalar.",
+      "tagline": "Biznesingiz haqiqatan ishlaydigan tizim.",
+      "detail": {
+        "title": "Jamoangiz haqiqatan foydalanadigan ichki platformalar.",
+        "lead": "Jadval tarqoqligi va SaaS tartibsizligini operatsiyalaringiz qanday ishlashiga moslab qurilgan bitta puxta tizim bilan almashtiramiz.",
+        "features": [
+          {
+            "title": "Operatsiyalaringiz atrofida qurilgan",
+            "body": "Avval haqiqiy ish jarayonlaringizni modellashtiramiz, keyin ekranlarni loyihalaymiz. Jamoangizga har kuni xalaqit beradigan tayyor abstraksiyalar yoʻq."
+          },
+          {
+            "title": "Sizga tegishli",
+            "body": "Manba kodi sizning GitHub'ingizda, maʼlumotlar bazasi sizning bulutingizda. Har yangilanishda oshib boradigan foydalanuvchi haqi yoʻq."
+          },
+          {
+            "title": "Rollar toʻgʻri qilingan",
+            "body": "Boshidanoq koʻp ijarali va rollarga asoslangan. Administratorlar, menejerlar va operatorlar aynan kerakli narsani koʻradi."
+          },
+          {
+            "title": "Ishonch qozonadigan hisobotlar",
+            "body": "Audit izlari, eksport qilinadigan maʼlumotlar va xotirjam dashboardlar. Moliya va operatsiyalarni asbobga haqiqatan tayanishga undaydigan narsalar."
+          }
+        ],
+        "deliverables": [
+          "PostgreSQL'da maxsus maʼlumotlar modeli",
+          "Rollarga asoslangan admin panel",
+          "Autentifikatsiya va audit jurnallari",
+          "Hisobotlar va CSV / Excel eksporti",
+          "Operatsion dashboardlar",
+          "Jamoangiz saqlaydigan hujjatlar"
+        ]
+      }
+    },
+    "ai": {
+      "name": "AI yechimlari",
+      "short": "Chatbotlar, agentlar, RAG qidiruv, analitik modellar yoki mahsulotning oʻziga oʻrnatilgan AI - jamoaga haqiqatan kerak boʻlgan narsa.",
+      "tagline": "Jamoadagi oʻrnini oqlaydigan AI.",
+      "detail": {
+        "title": "Jamoadagi oʻrnini oqlaydigan AI.",
+        "lead": "Chatbotlar, ichki agentlar, RAG qidiruv yoki mahsulotning oʻziga toʻqilgan AI - faqat demoda chiroyli koʻrinish emas, oʻlchanadigan foyda keltirish uchun qurilgan.",
+        "features": [
+          {
+            "title": "Asosli, gallyutsinatsiyasiz",
+            "body": "Manbalariga havola qiladigan retrieval-augmented generation dizaynlari. Javob sifatini chiqarishdan oldin baholash toʻplami bilan oʻlchaymiz."
+          },
+          {
+            "title": "Ishlab chiqarishga tayyor",
+            "body": "Xarajat chegaralari, tezlik cheklovlari, prompt jurnallari va model notoʻgʻri ishlagan kunlar uchun toza zaxira yechimlar. Na hisobda, na pochtangizda hech qanday kutilmagan holat."
+          },
+          {
+            "title": "Mahsulotga oʻrnatilgan",
+            "body": "AI yon tomonga ulangan chat vidjeti emas, dasturingiz ichidagi funksiya sifatida yashaydi. Foydalanuvchilar javoblarni allaqachon soʻramoqchi boʻlgan joyda oladi."
+          },
+          {
+            "title": "Modeldan mustaqil",
+            "body": "Har bir vazifaga toʻgʻri modelni tanlaymiz - Claude, GPT, ochiq vaznlar - va ilovani qayta yozmasdan keyinroq almashtirish erkinligini qoldiramiz."
+          }
+        ],
+        "deliverables": [
+          "Oʻlchanadigan maqsadlar bilan foydalanish stsenariysi",
+          "RAG quvuri yoki agent arxitekturasi",
+          "Baholash toʻplami (offline va online)",
+          "Xarajat va sifat dashboardlari",
+          "Monitoring bilan ishlab chiqarish deployi",
+          "Jamoangiz uchun topshirish qoʻllanmasi"
+        ]
+      }
+    },
+    "other": {
+      "name": "Boshqa narsa"
+    }
+  },
+  "about": {
+    "eyebrow": "Biz haqimizda",
+    "title": "Kichik, senior jamoa. Ataylab.",
+    "lead": "Nordven - yillar davomida birga mahsulot chiqarib kelgan muhandislar va dizaynerlar studiyasi. Jamoani kichik saqlaymiz, shunda loyihangizni baholaydiganlar kod yozadigan va navbatchilik chaqiruviga javob beradigan oʻsha odamlar boʻladi.",
+    "values": [
+      {
+        "title": "Sukut boʻyicha senior",
+        "body": "Loyihangizdagi har bir inson oʻn yil yoki undan koʻproq ishlab chiqarish dasturlarini chiqargan."
+      },
+      {
+        "title": "Bitta mantiq",
+        "body": "Veb-saytlar, ERP va CRM hamda AI bitta jamoada - taʼminotchilar oʻrtasida integratsiya dramalarisiz."
+      },
+      {
+        "title": "Dizayn boʻyicha xotirjam",
+        "body": "Tunda soat 2 da hech kimni - jumladan oʻzimizni ham - uygʻotmaydigan dasturlarga moslaymiz."
+      },
+      {
+        "title": "Nomlay oladigan natijalar",
+        "body": "Har bir loyihaning bitta jumlada taʼriflay oladigan oʻlchanadigan natijasi bor."
+      }
+    ],
+    "team": {
+      "eyebrow": "Jamoa",
+      "title": "Orqasidagi odamlar.",
+      "members": [
+        { "name": "Malik Fattaev", "role": "COO va hammuassis" },
+        { "name": "Shohrukh Normaxmatov", "role": "CFO va hammuassis" }
+      ]
+    }
+  },
+  "contact": {
+    "eyebrow": "Aloqa",
+    "title": "Loyiha haqida gapirib bering.",
+    "subtitle": "Bir necha jumla yetarli. Bir ish kuni ichida javob beramiz.",
+    "form": {
+      "name": "Ismingiz",
+      "namePlaceholder": "Avery Stone",
+      "email": "Ish pochtangiz",
+      "emailPlaceholder": "you@company.com",
+      "company": "Kompaniya",
+      "companyPlaceholder": "Company, Inc.",
+      "service": "Qiziqtirgan yoʻnalish",
+      "servicePlaceholder": "Birini tanlang",
+      "message": "Nima ustida ishlayapsiz?",
+      "messagePlaceholder": "Qisqa tavsif yetarli.",
+      "submit": "Xabar yuborish",
+      "submitting": "Yuborilmoqda...",
+      "success": "Rahmat. Tez orada bogʻlanamiz.",
+      "error": "Nimadir xato ketdi. Qaytadan urinib koʻring yoki coo@nordvenlab.com manziliga yozing.",
+      "validation": {
+        "nameTooShort": "Iltimos, ismingizni kiriting.",
+        "emailInvalid": "Iltimos, toʻgʻri pochta kiriting.",
+        "messageTooShort": "Bir-ikki jumla tayyorlanishimizga yordam beradi."
+      }
+    },
+    "channels": {
+      "eyebrow": "Yoki toʻgʻridan-toʻgʻri bogʻlaning",
+      "email": { "label": "Pochta" },
+      "instagram": { "label": "Instagram" }
+    }
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "subtitle": "Siz qidirgan sahifa koʻchirilgan yoki hech qachon mavjud boʻlmagan.",
+    "cta": "Bosh sahifaga"
+  }
+}
