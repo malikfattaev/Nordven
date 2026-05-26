@@ -63,6 +63,10 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
+            <Button href="/contact">{t("startProject")}</Button>
+          </div>
+
+          <div className="hidden lg:block">
             <LocaleSwitcher />
           </div>
 
