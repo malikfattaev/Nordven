@@ -247,6 +247,7 @@
     },
     "channels": {
       "eyebrow": "Or reach us directly",
+      "phone": { "label": "Phone" },
       "email": { "label": "Email" },
       "instagram": { "label": "Instagram" }
     }

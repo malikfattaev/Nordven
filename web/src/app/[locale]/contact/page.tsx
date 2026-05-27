@@ -59,6 +59,13 @@ export default async function ContactPage({ params }: Props) {
 
   const channels = [
     {
+      key: "phone",
+      label: t("channels.phone.label"),
+      value: site.phone.display,
+      href: `tel:${site.phone.e164}`,
+      external: false,
+    },
+    {
       key: "email",
       label: t("channels.email.label"),
       value: site.email,

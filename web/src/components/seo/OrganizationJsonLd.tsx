@@ -22,6 +22,7 @@ export async function OrganizationJsonLd({ locale }: Props) {
         alternateName: site.legalName,
         url: site.url,
         email: site.email,
+        telephone: site.phone.e164,
         foundingDate: String(site.founded),
         sameAs: [site.socials.instagram.url],
         founder: site.founders.map((person) => ({
@@ -38,6 +39,7 @@ export async function OrganizationJsonLd({ locale }: Props) {
           "@type": "ContactPoint",
           contactType: "sales",
           email: site.email,
+          telephone: site.phone.e164,
           availableLanguage: routing.locales.map((l) => languageNameMap[l]),
         },
         hasOfferCatalog: {

@@ -247,6 +247,7 @@
     },
     "channels": {
       "eyebrow": "Или свяжитесь напрямую",
+      "phone": { "label": "Телефон" },
       "email": { "label": "Почта" },
       "instagram": { "label": "Instagram" }
     }

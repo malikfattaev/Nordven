@@ -203,6 +203,12 @@ function MobileOverlay({ onClose }: { onClose: () => void }) {
           <div className="flex flex-col gap-6 border-t border-[color:var(--color-line)] pt-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-col gap-2">
               <a
+                href={`tel:${site.phone.e164}`}
+                className="text-sm text-[color:var(--color-ink-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
+              >
+                {tChannels("phone.label")} · {site.phone.display}
+              </a>
+              <a
                 href={`mailto:${site.email}`}
                 className="text-sm text-[color:var(--color-ink-soft)] transition-colors duration-200 ease-[var(--ease-soft)] hover:text-[color:var(--color-ink)]"
               >

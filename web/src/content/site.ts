@@ -5,6 +5,10 @@ export const site = {
   domain: "nordvenlab.com",
   url: "https://nordvenlab.com",
   email: "coo@nordvenlab.com",
+  phone: {
+    display: "+1 (716) 902-6473",
+    e164: "+17169026473",
+  },
   socials: {
     instagram: {
       handle: "nordvenlab",

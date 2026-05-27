@@ -247,6 +247,7 @@
     },
     "channels": {
       "eyebrow": "Yoki toʻgʻridan-toʻgʻri bogʻlaning",
+      "phone": { "label": "Telefon" },
       "email": { "label": "Pochta" },
       "instagram": { "label": "Instagram" }
     }
