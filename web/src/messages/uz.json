@@ -7,16 +7,21 @@
     "ogAlt": "Nordven | Software Lab",
     "about": {
       "title": "Nordven haqida",
-      "description": "Veb-saytlar, ERP, CRM va AI mahsulotlarini yaratadigan senior darajadagi studiya. Asoschilar - Malik Fattaev (COO) va Shohrukh Normaxmatov (CFO). Kichik jamoa, sukut boʻyicha senior."
+      "description": "Veb-saytlar, ERP, CRM va AI mahsulotlarini yaratadigan senior darajadagi studiya. Asoschilar - Malik Fattaev (Software Developer) va Shohrukh Normaxmatov (COO). Kichik jamoa, sukut boʻyicha senior."
     },
     "contact": {
       "title": "Nordven bilan bogʻlanish",
       "description": "Keyingi veb-saytingiz, ERP, CRM yoki AI loyihangiz haqida suhbatni boshlang. Bir ish kuni ichida javob beramiz."
+    },
+    "portfolio": {
+      "title": "Nordven portfoliosi",
+      "description": "Nordven tanlangan ishlari: veb-saytlar, ERP va CRM platformalari hamda AQSh, Ispaniya va Lotin Amerikasidagi jamoalar uchun boshidan oxirigacha yaratilgan AI mahsulotlari."
     }
   },
   "nav": {
     "services": "Xizmatlar",
     "process": "Jarayon",
+    "portfolio": "Portfolio",
     "about": "Biz haqimizda",
     "contact": "Aloqa",
     "menu": "Menyu",
@@ -189,6 +194,32 @@
       "name": "Boshqa narsa"
     }
   },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Biz oʻnlab mijozlarimiz uchun IT kelajagini qanday qurayotganimizni koʻring.",
+    "projects": {
+      "fleet": {
+        "client": "Northwind Logistics",
+        "title": "Avtoparkni real vaqtda kuzatish platformasi",
+        "body": "Jadvallar va qoʻngʻiroqlar chalkashligini har bir avtomobil, marshrut va yetkazib berishni real vaqtda kuzatadigan yagona operatsion panel bilan almashtirdik."
+      },
+      "triage": {
+        "client": "Vela Health",
+        "title": "Klinikalar uchun AI tartiblash yordamchisi",
+        "body": "Kompyuterli koʻrish va til modellari bemor anketalarini oldindan oʻqib, har bir holatni soniyalar ichida kerakli mutaxassisga yoʻnaltiradi."
+      },
+      "commerce": {
+        "client": "Lumen Retail",
+        "title": "Headless arxitekturada doʻkonni qayta qurish",
+        "body": "Headless stekdagi tezkor ikki tilli vitrina konversiyani oshirdi va jamoaga katalogni dasturchilar yordamisiz boshqarish imkonini berdi."
+      },
+      "crm": {
+        "client": "Atlas Finance",
+        "title": "Ichki CRM va hisobot tizimi",
+        "body": "Voronka, mijozlar va moliyaviy hisobot uchun yagona oʻz tizimi, rollarga asoslangan kirish va butun jamoa ishonadigan audit jurnali bilan."
+      }
+    }
+  },
   "about": {
     "eyebrow": "Biz haqimizda",
     "title": "Kichik, senior jamoa. Ataylab.",
@@ -215,8 +246,8 @@
       "eyebrow": "Jamoa",
       "title": "Orqasidagi odamlar.",
       "members": [
-        { "name": "Malik Fattaev", "role": "COO va hammuassis" },
-        { "name": "Shohrukh Normaxmatov", "role": "CFO va hammuassis" }
+        { "name": "Malik Fattaev", "role": "Software Developer va hammuassis" },
+        { "name": "Shohrukh Normaxmatov", "role": "COO va hammuassis" }
       ]
     }
   },

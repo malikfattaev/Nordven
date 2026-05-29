@@ -7,16 +7,21 @@
     "ogAlt": "Nordven | Software Lab",
     "about": {
       "title": "About Nordven",
-      "description": "A senior software studio building websites, ERP, CRM, and AI products. Co-founded by Malik Fattaev (COO) and Shohrukh Normaxmatov (CFO). Small team, senior by default."
+      "description": "A senior software studio building websites, ERP, CRM, and AI products. Co-founded by Malik Fattaev (Software Developer) and Shohrukh Normaxmatov (COO). Small team, senior by default."
     },
     "contact": {
       "title": "Contact Nordven",
       "description": "Start a conversation about your next website, ERP, CRM, or AI project. We reply within one business day in English or Spanish."
+    },
+    "portfolio": {
+      "title": "Nordven Portfolio",
+      "description": "Selected work from Nordven: websites, ERP and CRM platforms, and AI products built end to end for teams across the US, Spain and Latin America."
     }
   },
   "nav": {
     "services": "Services",
     "process": "Process",
+    "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
@@ -189,6 +194,32 @@
       "name": "Something else"
     }
   },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "See how we build the IT future for dozens of our clients.",
+    "projects": {
+      "fleet": {
+        "client": "Northwind Logistics",
+        "title": "Real-time fleet visibility platform",
+        "body": "We replaced a tangle of spreadsheets and phone calls with one operations dashboard that tracks every vehicle, route and delivery as it happens."
+      },
+      "triage": {
+        "client": "Vela Health",
+        "title": "AI triage assistant for clinics",
+        "body": "Computer vision and language models that pre-read patient intake forms and route each case to the right specialist in seconds."
+      },
+      "commerce": {
+        "client": "Lumen Retail",
+        "title": "Headless commerce rebuild",
+        "body": "A fast, bilingual storefront on a headless stack that lifted conversion and let the team run the catalog without engineering help."
+      },
+      "crm": {
+        "client": "Atlas Finance",
+        "title": "Internal CRM and reporting suite",
+        "body": "One owned system for pipeline, clients and finance reporting, with role-based access and audit trails the whole team trusts."
+      }
+    }
+  },
   "about": {
     "eyebrow": "About",
     "title": "A small, senior team. On purpose.",
@@ -215,8 +246,8 @@
       "eyebrow": "Team",
       "title": "The people behind it.",
       "members": [
-        { "name": "Malik Fattaev", "role": "COO & Co-Founder" },
-        { "name": "Shohrukh Normaxmatov", "role": "CFO & Co-Founder" }
+        { "name": "Malik Fattaev", "role": "Software Developer & Co-Founder" },
+        { "name": "Shohrukh Normaxmatov", "role": "COO & Co-Founder" }
       ]
     }
   },

@@ -17,8 +17,8 @@ export const site = {
   },
   founded: 2023,
   founders: [
-    { name: "Malik Fattaev", role: "COO & Co-Founder" },
-    { name: "Shohrukh Normaxmatov", role: "CFO & Co-Founder" },
+    { name: "Malik Fattaev", role: "Software Developer & Co-Founder" },
+    { name: "Shohrukh Normaxmatov", role: "COO & Co-Founder" },
   ],
   areaServed: ["US", "MX", "ES", "AR", "CO", "CL", "PE"],
   knowsAbout: [
