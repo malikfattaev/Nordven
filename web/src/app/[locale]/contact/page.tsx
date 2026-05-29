@@ -4,6 +4,8 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { site } from "@/content/site";
+import { alternatesFor } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -13,22 +15,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const tNav = await getTranslations({ locale, namespace: "nav" });
   const tMeta = await getTranslations({ locale, namespace: "meta" });
-  const canonical = locale === "en" ? "/contact" : `/${locale}/contact`;
+  const alternates = alternatesFor(locale as Locale, "/contact");
   return {
     title: tNav("contact"),
     description: tMeta("contact.description"),
-    alternates: {
-      canonical,
-      languages: {
-        "en-US": "/contact",
-        "es-ES": "/es/contact",
-        "x-default": "/contact",
-      },
-    },
+    alternates,
     openGraph: {
       title: tMeta("contact.title"),
       description: tMeta("contact.description"),
-      url: canonical,
+      url: alternates.canonical,
       type: "website",
     },
   };

@@ -10,7 +10,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ServiceVisual } from "@/components/home/ServiceVisual";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { locales, type Locale } from "@/i18n/routing";
-import { pathForLocale } from "@/lib/seo";
+import { alternatesFor } from "@/lib/seo";
 import { services, serviceSlugs, type ServiceSlug } from "@/content/services";
 import { cn } from "@/lib/cn";
 
@@ -40,23 +40,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = tServices(`${slug}.name`);
   const description = tServices(`${slug}.detail.lead`);
-  const canonical = pathForLocale(locale, "en", `/services/${slug}`);
-
-  const languages: Record<string, string> = {
-    "x-default": pathForLocale("en", "en", `/services/${slug}`),
-  };
-  for (const l of locales) {
-    languages[l === "en" ? "en-US" : "es-ES"] = pathForLocale(l, "en", `/services/${slug}`);
-  }
+  const alternates = alternatesFor(locale, `/services/${slug}`);
 
   return {
     title,
     description,
-    alternates: { canonical, languages },
+    alternates,
     openGraph: {
       title: `${title} — ${tMeta("title")}`,
       description,
-      url: canonical,
+      url: alternates.canonical,
       type: "website",
     },
   };

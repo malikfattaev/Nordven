@@ -9,7 +9,7 @@ import { PageTransition } from "@/components/layout/PageTransition";
 import { SmoothAnchorScroll } from "@/components/layout/SmoothAnchorScroll";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { publicEnv } from "@/lib/env";
-import { htmlLangMap, ogLocaleMap, pathForLocale } from "@/lib/seo";
+import { alternatesFor, htmlLangMap, ogLocaleMap } from "@/lib/seo";
 import { site } from "@/content/site";
 
 type Props = {
@@ -44,17 +44,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "meta" });
 
-  const canonical = pathForLocale(locale, routing.defaultLocale, "/");
+  const { canonical, languages } = alternatesFor(locale, "/");
   const alternateLocales = routing.locales
     .filter((l) => l !== locale)
     .map((l) => ogLocaleMap[l]);
-
-  const languages: Record<string, string> = {
-    "x-default": pathForLocale(routing.defaultLocale, routing.defaultLocale, "/"),
-  };
-  for (const l of routing.locales) {
-    languages[htmlLangMap[l]] = pathForLocale(l, routing.defaultLocale, "/");
-  }
 
   return {
     metadataBase: new URL(publicEnv.NEXT_PUBLIC_SITE_URL),

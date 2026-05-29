@@ -1,4 +1,4 @@
-import type { Locale } from "@/i18n/routing";
+import { defaultLocale, locales, type Locale } from "@/i18n/routing";
 
 export const ogLocaleMap: Record<Locale, string> = {
   en: "en_US",
@@ -26,4 +26,23 @@ export function pathForLocale(locale: Locale, defaultLocale: Locale, path: strin
   const cleaned = normalized === "/" ? "" : normalized;
   if (locale === defaultLocale) return cleaned || "/";
   return `/${locale}${cleaned}` || `/${locale}`;
+}
+
+/**
+ * Builds canonical + hreflang alternates for a route across every locale.
+ * Keeps page-level metadata aligned with the next-intl middleware Link header
+ * so Google receives a single, consistent set of hreflang signals.
+ */
+export function alternatesFor(locale: Locale, path: string) {
+  const languages: Record<string, string> = {
+    "x-default": pathForLocale(defaultLocale, defaultLocale, path),
+  };
+  for (const l of locales) {
+    languages[htmlLangMap[l]] = pathForLocale(l, defaultLocale, path);
+  }
+
+  return {
+    canonical: pathForLocale(locale, defaultLocale, path),
+    languages,
+  };
 }

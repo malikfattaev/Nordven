@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { alternatesFor } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
 
 const VALUE_KEYS = ["0", "1", "2", "3"] as const;
 const TEAM_KEYS = ["0", "1"] as const;
@@ -15,22 +17,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const tNav = await getTranslations({ locale, namespace: "nav" });
   const tMeta = await getTranslations({ locale, namespace: "meta" });
-  const canonical = locale === "en" ? "/about" : `/${locale}/about`;
+  const alternates = alternatesFor(locale as Locale, "/about");
   return {
     title: tNav("about"),
     description: tMeta("about.description"),
-    alternates: {
-      canonical,
-      languages: {
-        "en-US": "/about",
-        "es-ES": "/es/about",
-        "x-default": "/about",
-      },
-    },
+    alternates,
     openGraph: {
       title: tMeta("about.title"),
       description: tMeta("about.description"),
-      url: canonical,
+      url: alternates.canonical,
       type: "website",
     },
   };
