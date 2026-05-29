@@ -25,7 +25,7 @@ export function Hero() {
             <Button href="/contact" size="lg">
               {t("primaryCta")}
             </Button>
-            <Button href="/#services" variant="secondary" size="lg">
+            <Button href="/portfolio" variant="secondary" size="lg">
               {t("secondaryCta")}
             </Button>
           </div>

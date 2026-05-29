@@ -9,6 +9,7 @@ export const dynamic = "force-dynamic";
 const ROUTES = [
   "/",
   "/about",
+  "/portfolio",
   "/contact",
   ...serviceSlugs.map((slug) => `/services/${slug}` as const),
 ] as const;
