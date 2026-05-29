@@ -38,7 +38,7 @@ export default async function PortfolioPage({ params }: Props) {
 
   return (
     <>
-      <Section className="pb-0 pt-4 text-center sm:pt-6">
+      <Section className="pb-0 pt-4 text-center sm:pb-0 sm:pt-6 lg:pb-0 lg:pt-10">
         <Container>
           <Reveal>
             <h1 className="font-display text-6xl font-medium leading-[1.02] text-balance sm:text-7xl md:text-8xl">
