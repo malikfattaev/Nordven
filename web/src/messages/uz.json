@@ -198,25 +198,21 @@
     "title": "Portfolio",
     "subtitle": "Biz oʻnlab mijozlarimiz uchun IT kelajagini qanday qurayotganimizni koʻring.",
     "projects": {
-      "fleet": {
-        "client": "Northwind Logistics",
-        "title": "Avtoparkni real vaqtda kuzatish platformasi",
-        "body": "Jadvallar va qoʻngʻiroqlar chalkashligini har bir avtomobil, marshrut va yetkazib berishni real vaqtda kuzatadigan yagona operatsion panel bilan almashtirdik."
+      "sandimas": {
+        "client": "San Dimas Pharmacy",
+        "body": "Dorixona. Ular uchun veb-sayt yaratdik."
       },
-      "triage": {
-        "client": "Vela Health",
-        "title": "Klinikalar uchun AI tartiblash yordamchisi",
-        "body": "Kompyuterli koʻrish va til modellari bemor anketalarini oldindan oʻqib, har bir holatni soniyalar ichida kerakli mutaxassisga yoʻnaltiradi."
+      "thespot": {
+        "client": "The Spot",
+        "body": "Koʻchmas mulk platformasi: uy-joy qidirish, joylash va ijaraga olish. Veb-sayt va ERP tizimini yaratdik."
       },
-      "commerce": {
-        "client": "Lumen Retail",
-        "title": "Headless arxitekturada doʻkonni qayta qurish",
-        "body": "Headless stekdagi tezkor ikki tilli vitrina konversiyani oshirdi va jamoaga katalogni dasturchilar yordamisiz boshqarish imkonini berdi."
+      "yolla": {
+        "client": "Yolla",
+        "body": "Ertalabki nonushta yetkazib berish xizmati. Veb-sayt, AI bot va operatsiyalar uchun ERP tizimini yaratdik."
       },
-      "crm": {
-        "client": "Atlas Finance",
-        "title": "Ichki CRM va hisobot tizimi",
-        "body": "Voronka, mijozlar va moliyaviy hisobot uchun yagona oʻz tizimi, rollarga asoslangan kirish va butun jamoa ishonadigan audit jurnali bilan."
+      "airmax": {
+        "client": "Air Max Technics",
+        "body": "Samolyotlarga texnik xizmat koʻrsatuvchi kompaniya. Veb-sayt va ERP tizimini yaratdik."
       }
     }
   },

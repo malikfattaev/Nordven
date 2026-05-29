@@ -38,7 +38,7 @@ export default async function PortfolioPage({ params }: Props) {
 
   return (
     <>
-      <Section className="pb-10 pt-4 text-center sm:pb-14 sm:pt-6">
+      <Section className="pb-0 pt-4 text-center sm:pt-6">
         <Container>
           <Reveal>
             <h1 className="font-display text-6xl font-medium leading-[1.02] text-balance sm:text-7xl md:text-8xl">
@@ -69,10 +69,7 @@ export default async function PortfolioPage({ params }: Props) {
                 <p className="font-display text-3xl font-medium tracking-tight text-[color:var(--accent)] sm:text-4xl">
                   {t(`projects.${project.id}.client`)}
                 </p>
-                <h2 className="mt-10 font-display text-2xl text-balance text-[color:var(--color-ink)] sm:text-3xl">
-                  {t(`projects.${project.id}.title`)}
-                </h2>
-                <p className="mt-4 text-pretty text-[color:var(--color-ink-soft)]">
+                <p className="mt-6 text-pretty text-[color:var(--color-ink-soft)]">
                   {t(`projects.${project.id}.body`)}
                 </p>
               </Reveal>

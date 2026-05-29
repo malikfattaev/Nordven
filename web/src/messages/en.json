@@ -198,25 +198,21 @@
     "title": "Portfolio",
     "subtitle": "See how we build the IT future for dozens of our clients.",
     "projects": {
-      "fleet": {
-        "client": "Northwind Logistics",
-        "title": "Real-time fleet visibility platform",
-        "body": "We replaced a tangle of spreadsheets and phone calls with one operations dashboard that tracks every vehicle, route and delivery as it happens."
+      "sandimas": {
+        "client": "San Dimas Pharmacy",
+        "body": "Neighborhood pharmacy. We designed and built their website."
       },
-      "triage": {
-        "client": "Vela Health",
-        "title": "AI triage assistant for clinics",
-        "body": "Computer vision and language models that pre-read patient intake forms and route each case to the right specialist in seconds."
+      "thespot": {
+        "client": "The Spot",
+        "body": "Real estate platform to search, list and rent homes. We built the website and the ERP behind it."
       },
-      "commerce": {
-        "client": "Lumen Retail",
-        "title": "Headless commerce rebuild",
-        "body": "A fast, bilingual storefront on a headless stack that lifted conversion and let the team run the catalog without engineering help."
+      "yolla": {
+        "client": "Yolla",
+        "body": "Morning breakfast delivery service. We built the website, an AI assistant and the ERP that runs operations."
       },
-      "crm": {
-        "client": "Atlas Finance",
-        "title": "Internal CRM and reporting suite",
-        "body": "One owned system for pipeline, clients and finance reporting, with role-based access and audit trails the whole team trusts."
+      "airmax": {
+        "client": "Air Max Technics",
+        "body": "Aircraft maintenance company. We built the website and the ERP for their operations."
       }
     }
   },

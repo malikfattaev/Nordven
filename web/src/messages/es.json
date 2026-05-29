@@ -198,25 +198,21 @@
     "title": "Portafolio",
     "subtitle": "Descubre cómo construimos el futuro IT para decenas de nuestros clientes.",
     "projects": {
-      "fleet": {
-        "client": "Northwind Logistics",
-        "title": "Plataforma de visibilidad de flota en tiempo real",
-        "body": "Reemplazamos una maraña de hojas de cálculo y llamadas por un único panel de operaciones que rastrea cada vehículo, ruta y entrega en tiempo real."
+      "sandimas": {
+        "client": "San Dimas Pharmacy",
+        "body": "Farmacia de barrio. Diseñamos y construimos su sitio web."
       },
-      "triage": {
-        "client": "Vela Health",
-        "title": "Asistente de triaje con IA para clínicas",
-        "body": "Visión por computadora y modelos de lenguaje que leen los formularios de admisión y derivan cada caso al especialista correcto en segundos."
+      "thespot": {
+        "client": "The Spot",
+        "body": "Plataforma inmobiliaria para buscar, publicar y alquilar viviendas. Construimos el sitio web y el ERP que lo respalda."
       },
-      "commerce": {
-        "client": "Lumen Retail",
-        "title": "Reconstrucción de comercio headless",
-        "body": "Una tienda bilingüe y veloz sobre un stack headless que elevó la conversión y permitió al equipo gestionar el catálogo sin ayuda de ingeniería."
+      "yolla": {
+        "client": "Yolla",
+        "body": "Servicio de entrega de desayunos. Construimos el sitio web, un asistente con IA y el ERP que gestiona las operaciones."
       },
-      "crm": {
-        "client": "Atlas Finance",
-        "title": "CRM interno y suite de reportes",
-        "body": "Un único sistema propio para pipeline, clientes y reportes financieros, con acceso por roles y registros de auditoría en los que todo el equipo confía."
+      "airmax": {
+        "client": "Air Max Technics",
+        "body": "Empresa de mantenimiento de aeronaves. Construimos el sitio web y el ERP para sus operaciones."
       }
     }
   },

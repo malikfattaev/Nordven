@@ -1,8 +1,8 @@
 export const portfolioProjectIds = [
-  "fleet",
-  "triage",
-  "commerce",
-  "crm",
+  "sandimas",
+  "thespot",
+  "yolla",
+  "airmax",
 ] as const;
 export type PortfolioProjectId = (typeof portfolioProjectIds)[number];
 
@@ -12,8 +12,8 @@ export type PortfolioProject = {
 };
 
 export const portfolioProjects: ReadonlyArray<PortfolioProject> = [
-  { id: "fleet", accent: "var(--color-mist-400)" },
-  { id: "triage", accent: "var(--color-lilac-400)" },
-  { id: "commerce", accent: "var(--color-mint-400)" },
-  { id: "crm", accent: "var(--color-mist-500)" },
+  { id: "sandimas", accent: "var(--color-mist-400)" },
+  { id: "thespot", accent: "var(--color-lilac-400)" },
+  { id: "yolla", accent: "var(--color-mint-400)" },
+  { id: "airmax", accent: "var(--color-mist-500)" },
 ] as const;
